@@ -1,0 +1,37 @@
+[0.783s] Invoking command in '/home/justin/glove_ROS/src/telekinesis': PYTHONPATH=/home/justin/glove_ROS/build/telekinesis/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/justin/glove_ROS/install/telekinesis/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/telekinesis build --build-base /home/justin/glove_ROS/build/telekinesis/build install --record /home/justin/glove_ROS/build/telekinesis/install.log --single-version-externally-managed install_data
+[0.998s] running egg_info
+[0.998s] creating ../../build/telekinesis/telekinesis.egg-info
+[0.999s] writing ../../build/telekinesis/telekinesis.egg-info/PKG-INFO
+[0.999s] writing dependency_links to ../../build/telekinesis/telekinesis.egg-info/dependency_links.txt
+[0.999s] writing entry points to ../../build/telekinesis/telekinesis.egg-info/entry_points.txt
+[0.999s] writing requirements to ../../build/telekinesis/telekinesis.egg-info/requires.txt
+[0.999s] writing top-level names to ../../build/telekinesis/telekinesis.egg-info/top_level.txt
+[0.999s] writing manifest file '../../build/telekinesis/telekinesis.egg-info/SOURCES.txt'
+[1.001s] reading manifest file '../../build/telekinesis/telekinesis.egg-info/SOURCES.txt'
+[1.002s] writing manifest file '../../build/telekinesis/telekinesis.egg-info/SOURCES.txt'
+[1.002s] running build
+[1.002s] running build_py
+[1.002s] creating /home/justin/glove_ROS/build/telekinesis/build
+[1.002s] creating /home/justin/glove_ROS/build/telekinesis/build/lib
+[1.002s] creating /home/justin/glove_ROS/build/telekinesis/build/lib/telekinesis
+[1.002s] copying telekinesis/ik_calc.py -> /home/justin/glove_ROS/build/telekinesis/build/lib/telekinesis
+[1.002s] copying telekinesis/__init__.py -> /home/justin/glove_ROS/build/telekinesis/build/lib/telekinesis
+[1.002s] running install
+[1.003s] running install_lib
+[1.003s] creating /home/justin/glove_ROS/install/telekinesis/lib/python3.10/site-packages/telekinesis
+[1.003s] copying /home/justin/glove_ROS/build/telekinesis/build/lib/telekinesis/ik_calc.py -> /home/justin/glove_ROS/install/telekinesis/lib/python3.10/site-packages/telekinesis
+[1.004s] copying /home/justin/glove_ROS/build/telekinesis/build/lib/telekinesis/__init__.py -> /home/justin/glove_ROS/install/telekinesis/lib/python3.10/site-packages/telekinesis
+[1.004s] byte-compiling /home/justin/glove_ROS/install/telekinesis/lib/python3.10/site-packages/telekinesis/ik_calc.py to ik_calc.cpython-310.pyc
+[1.005s] byte-compiling /home/justin/glove_ROS/install/telekinesis/lib/python3.10/site-packages/telekinesis/__init__.py to __init__.cpython-310.pyc
+[1.006s] running install_data
+[1.006s] creating /home/justin/glove_ROS/install/telekinesis/share/ament_index
+[1.006s] creating /home/justin/glove_ROS/install/telekinesis/share/ament_index/resource_index
+[1.006s] creating /home/justin/glove_ROS/install/telekinesis/share/ament_index/resource_index/packages
+[1.006s] copying resource/telekinesis -> /home/justin/glove_ROS/install/telekinesis/share/ament_index/resource_index/packages
+[1.006s] copying package.xml -> /home/justin/glove_ROS/install/telekinesis/share/telekinesis
+[1.006s] running install_egg_info
+[1.008s] Copying ../../build/telekinesis/telekinesis.egg-info to /home/justin/glove_ROS/install/telekinesis/lib/python3.10/site-packages/telekinesis-0.0.0-py3.10.egg-info
+[1.009s] running install_scripts
+[1.027s] Installing leap_ik script to /home/justin/glove_ROS/install/telekinesis/lib/telekinesis
+[1.027s] writing list of installed files to '/home/justin/glove_ROS/build/telekinesis/install.log'
+[1.051s] Invoked command in '/home/justin/glove_ROS/src/telekinesis' returned '0': PYTHONPATH=/home/justin/glove_ROS/build/telekinesis/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/justin/glove_ROS/install/telekinesis/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/telekinesis build --build-base /home/justin/glove_ROS/build/telekinesis/build install --record /home/justin/glove_ROS/build/telekinesis/install.log --single-version-externally-managed install_data

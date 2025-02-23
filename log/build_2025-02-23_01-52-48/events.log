@@ -1,0 +1,4 @@
+[0.000000] (-) TimerEvent: {}
+[0.000095] (-) JobUnselected: {'identifier': 'glove'}
+[0.000118] (-) JobUnselected: {'identifier': 'telekinesis'}
+[0.000134] (-) EventReactorShutdown: {}
