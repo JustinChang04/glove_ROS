@@ -12,8 +12,8 @@ def generate_launch_description():
         ),
         Node(
             package='telekinesis',
-            executable='leap_ik',
-            name='leap_ik',
+            executable='ik_calc',
+            name='ik_calc',
             output='screen',
             emulate_tty=True,
             parameters=[
