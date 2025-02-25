@@ -1,3 +1,0 @@
-[console_scripts]
-leap_ik = telekinesis.leap_ik:main
-
