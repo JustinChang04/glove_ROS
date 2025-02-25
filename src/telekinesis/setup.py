@@ -20,7 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'leap_ik = telekinesis.leap_ik:main'
+            'ik_calc = telekinesis.ik_calc:main'
         ],
     },
 )
