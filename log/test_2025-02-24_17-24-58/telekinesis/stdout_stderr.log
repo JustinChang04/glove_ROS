@@ -1,0 +1,368 @@
+[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.10.12, pytest-6.2.5, py-1.10.0, pluggy-0.13.0
+cachedir: /home/justin/glove_ROS/build/telekinesis/.pytest_cache
+rootdir: /home/justin/glove_ROS/src/telekinesis
+plugins: ament-copyright-0.12.11, ament-xmllint-0.12.11, ament-flake8-0.12.11, ament-pep257-0.12.11, ament-lint-0.12.11, launch-testing-1.0.7, launch-testing-ros-0.19.8, colcon-core-0.18.4, cov-3.0.0
+[1mcollecting ... [0m[1m
+collected 3 items                                                              [0m
+
+test/test_copyright.py [33ms[0m[32m                                                 [ 33%][0m
+test/test_flake8.py [31mF[0m[31m                                                    [ 66%][0m
+test/test_pep257.py [32m.[0m[31m                                                    [100%][0m
+
+=================================== FAILURES ===================================
+[31m[1m_________________________________ test_flake8 __________________________________[0m
+[1m[31mtest/test_flake8.py[0m:23: in test_flake8
+    [94massert[39;49;00m rc == [94m0[39;49;00m, \
+[1m[31mE   AssertionError: Found 56 code style errors / warnings:[0m
+[1m[31mE     ./telekinesis/ik_calc.py:10:1: F401 'sys' imported but unused[0m
+[1m[31mE     ./telekinesis/ik_calc.py:11:1: F401 'ament_index_python.packages.get_package_share_directory' imported but unused[0m
+[1m[31mE     ./telekinesis/ik_calc.py:15:100: E501 line too long (102 > 99 characters)[0m
+[1m[31mE     ./telekinesis/ik_calc.py:15:103: W291 trailing whitespace[0m
+[1m[31mE     ./telekinesis/ik_calc.py:17:100: E501 line too long (101 > 99 characters)[0m
+[1m[31mE     ./telekinesis/ik_calc.py:19:1: E302 expected 2 blank lines, found 0[0m
+[1m[31mE     ./telekinesis/ik_calc.py:21:35: W291 trailing whitespace[0m
+[1m[31mE     ./telekinesis/ik_calc.py:23:9: E265 block comment should start with '# '[0m
+[1m[31mE     ./telekinesis/ik_calc.py:24:9: E265 block comment should start with '# '[0m
+[1m[31mE     ./telekinesis/ik_calc.py:26:31: W291 trailing whitespace[0m
+[1m[31mE     ./telekinesis/ik_calc.py:32:1: W293 blank line contains whitespace[0m
+[1m[31mE     ./telekinesis/ik_calc.py:34:9: E265 block comment should start with '# '[0m
+[1m[31mE     ./telekinesis/ik_calc.py:39:25: E251 unexpected spaces around keyword / parameter equals[0m
+[1m[31mE     ./telekinesis/ik_calc.py:39:27: E251 unexpected spaces around keyword / parameter equals[0m
+[1m[31mE     ./telekinesis/ik_calc.py:41:1: W293 blank line contains whitespace[0m
+[1m[31mE     ./telekinesis/ik_calc.py:42:9: E265 block comment should start with '# '[0m
+[1m[31mE     ./telekinesis/ik_calc.py:44:13: E265 block comment should start with '# '[0m
+[1m[31mE     ./telekinesis/ik_calc.py:45:100: E501 line too long (100 > 99 characters)[0m
+[1m[31mE     ./telekinesis/ik_calc.py:46:13: E265 block comment should start with '# '[0m
+[1m[31mE     ./telekinesis/ik_calc.py:47:100: E501 line too long (110 > 99 characters)[0m
+[1m[31mE     ./telekinesis/ik_calc.py:48:14: W291 trailing whitespace[0m
+[1m[31mE     ./telekinesis/ik_calc.py:49:100: E501 line too long (101 > 99 characters)[0m
+[1m[31mE     ./telekinesis/ik_calc.py:50:100: E501 line too long (110 > 99 characters)[0m
+[1m[31mE     ./telekinesis/ik_calc.py:51:8: E114 indentation is not a multiple of 4 (comment)[0m
+[1m[31mE     ./telekinesis/ik_calc.py:58:1: W293 blank line contains whitespace[0m
+[1m[31mE     ./telekinesis/ik_calc.py:62:9: F841 local variable 'small_ball_shape' is assigned to but never used[0m
+[1m[31mE     ./telekinesis/ik_calc.py:67:1: W293 blank line contains whitespace[0m
+[1m[31mE     ./telekinesis/ik_calc.py:69:25: E231 missing whitespace after ','[0m
+[1m[31mE     ./telekinesis/ik_calc.py:70:100: E501 line too long (165 > 99 characters)[0m
+[1m[31mE     ./telekinesis/ik_calc.py:70:133: E261 at least two spaces before inline comment[0m
+[1m[31mE     ./telekinesis/ik_calc.py:70:166: W291 trailing whitespace[0m
+[1m[31mE     ./telekinesis/ik_calc.py:73:100: E501 line too long (101 > 99 characters)[0m
+[1m[31mE     ./telekinesis/ik_calc.py:74:73: W291 trailing whitespace[0m
+[1m[31mE     ./telekinesis/ik_calc.py:75:73: W291 trailing whitespace[0m
+[1m[31mE     ./telekinesis/ik_calc.py:76:73: W291 trailing whitespace[0m
+[1m[31mE     ./telekinesis/ik_calc.py:78:1: W293 blank line contains whitespace[0m
+[1m[31mE     ./telekinesis/ik_calc.py:80:66: E201 whitespace after '('[0m
+[1m[31mE     ./telekinesis/ik_calc.py:88:1: W293 blank line contains whitespace[0m
+[1m[31mE     ./telekinesis/ik_calc.py:90:9: E265 block comment should start with '# '[0m
+[1m[31mE     ./telekinesis/ik_calc.py:92:22: W291 trailing whitespace[0m
+[1m[31mE     ./telekinesis/ik_calc.py:93:25: E231 missing whitespace after ','[0m
+[1m[31mE     ./telekinesis/ik_calc.py:94:100: E501 line too long (205 > 99 characters)[0m
+[1m[31mE     ./telekinesis/ik_calc.py:95:100: E501 line too long (101 > 99 characters)[0m
+[1m[31mE     ./telekinesis/ik_calc.py:96:49: W291 trailing whitespace[0m
+[1m[31mE     ./telekinesis/ik_calc.py:99:9: E265 block comment should start with '# '[0m
+[1m[31mE     ./telekinesis/ik_calc.py:104:1: W293 blank line contains whitespace[0m
+[1m[31mE     ./telekinesis/ik_calc.py:106:27: W291 trailing whitespace[0m
+[1m[31mE     ./telekinesis/ik_calc.py:110:1: W293 blank line contains whitespace[0m
+[1m[31mE     ./telekinesis/ik_calc.py:113:1: W293 blank line contains whitespace[0m
+[1m[31mE     ./telekinesis/ik_calc.py:116:1: W293 blank line contains whitespace[0m
+[1m[31mE     ./telekinesis/ik_calc.py:119:1: W293 blank line contains whitespace[0m
+[1m[31mE     ./telekinesis/ik_calc.py:139:1: W293 blank line contains whitespace[0m
+[1m[31mE     ./telekinesis/ik_calc.py:140:100: E501 line too long (140 > 99 characters)[0m
+[1m[31mE     ./telekinesis/ik_calc.py:158:9: E265 block comment should start with '# '[0m
+[1m[31mE     ./telekinesis/ik_calc.py:171:1: E302 expected 2 blank lines, found 1[0m
+[1m[31mE     ./telekinesis/ik_calc.py:181:1: E305 expected 2 blank lines after class or function definition, found 1[0m
+[1m[31mE   assert 1 == 0[0m
+----------------------------- Captured stdout call -----------------------------
+
+./telekinesis/ik_calc.py:10:1: F401 'sys' imported but unused
+import sys
+^
+
+./telekinesis/ik_calc.py:11:1: F401 'ament_index_python.packages.get_package_share_directory' imported but unused
+from ament_index_python.packages import get_package_share_directory
+^
+
+./telekinesis/ik_calc.py:15:100: E501 line too long (102 > 99 characters)
+'''
+This takes the glove data, and runs inverse kinematics and then publishes onto LEAP Hand.
+
+Note how the fingertip positions are matching, but the joint angles between the two hands are not.  :) 
+
+Inspired by Dexcap https://dex-cap.github.io/ by Wang et. al. and Robotic Telekinesis by Shaw et. al.
+'''
+   
+                                                                                         
+
+    ^
+
+./telekinesis/ik_calc.py:15:103: W291 trailing whitespace
+'''
+This takes the glove data, and runs inverse kinematics and then publishes onto LEAP Hand.
+
+Note how the fingertip positions are matching, but the joint angles between the two hands are not.  :) 
+
+Inspired by Dexcap https://dex-cap.github.io/ by Wang et. al. and Robotic Telekinesis by Shaw et. al.
+'''
+   
+                                                                                         
+
+       ^
+
+./telekinesis/ik_calc.py:17:100: E501 line too long (101 > 99 characters)
+'''
+This takes the glove data, and runs inverse kinematics and then publishes onto LEAP Hand.
+
+Note how the fingertip positions are matching, but the joint angles between the two hands are not.  :) 
+
+Inspired by Dexcap https://dex-cap.github.io/ by Wang et. al. and Robotic Telekinesis by Shaw et. al.
+'''
+   
+                                                                                         
+
+    ^
+
+./telekinesis/ik_calc.py:19:1: E302 expected 2 blank lines, found 0
+class PybulletIK(Node):
+^
+
+./telekinesis/ik_calc.py:21:35: W291 trailing whitespace
+        super().__init__('pyb_ik')  
+                                  ^
+
+./telekinesis/ik_calc.py:23:9: E265 block comment should start with '# '
+        #clid = p.connect(p.SHARED_MEMORY)
+        ^
+
+./telekinesis/ik_calc.py:24:9: E265 block comment should start with '# '
+        #clid = p.connect(p.DIRECT)
+        ^
+
+./telekinesis/ik_calc.py:26:31: W291 trailing whitespace
+        # load right leap hand      
+                              ^
+
+./telekinesis/ik_calc.py:32:1: W293 blank line contains whitespace
+        
+^
+
+./telekinesis/ik_calc.py:34:9: E265 block comment should start with '# '
+        ##You may have to set this path for your setup on ROS2
+        ^
+
+./telekinesis/ik_calc.py:39:25: E251 unexpected spaces around keyword / parameter equals
+            useFixedBase = True
+                        ^
+
+./telekinesis/ik_calc.py:39:27: E251 unexpected spaces around keyword / parameter equals
+            useFixedBase = True
+                          ^
+
+./telekinesis/ik_calc.py:41:1: W293 blank line contains whitespace
+               
+^
+
+./telekinesis/ik_calc.py:42:9: E265 block comment should start with '# '
+        #this is leap hand specific and may require us to change
+        ^
+
+./telekinesis/ik_calc.py:44:13: E265 block comment should start with '# '
+            #writing to /leaphand_node/cmd_allegro_left
+            ^
+
+./telekinesis/ik_calc.py:45:100: E501 line too long (100 > 99 characters)
+            self.pub_hand = self.create_publisher(JointState, '/leaphand_node/cmd_allegro_left', 10)
+                                                                                                   ^
+
+./telekinesis/ik_calc.py:46:13: E265 block comment should start with '# '
+            #reading from /glove/l_short
+            ^
+
+./telekinesis/ik_calc.py:47:100: E501 line too long (110 > 99 characters)
+            self.sub_skeleton = self.create_subscription(PoseArray, "/glove/l_short", self.get_glove_data, 10)
+                                                                                                   ^
+
+./telekinesis/ik_calc.py:48:14: W291 trailing whitespace
+        else:  
+             ^
+
+./telekinesis/ik_calc.py:49:100: E501 line too long (101 > 99 characters)
+            self.pub_hand = self.create_publisher(JointState, '/leaphand_node/cmd_allegro_right', 10)
+                                                                                                   ^
+
+./telekinesis/ik_calc.py:50:100: E501 line too long (110 > 99 characters)
+            self.sub_skeleton = self.create_subscription(PoseArray, "/glove/r_short", self.get_glove_data, 10)
+                                                                                                   ^
+
+./telekinesis/ik_calc.py:51:8: E114 indentation is not a multiple of 4 (comment)
+       ##################
+       ^
+
+./telekinesis/ik_calc.py:58:1: W293 blank line contains whitespace
+            
+^
+
+./telekinesis/ik_calc.py:62:9: F841 local variable 'small_ball_shape' is assigned to but never used
+        small_ball_shape = p.createCollisionShape(p.GEOM_SPHERE, radius=small_ball_radius)
+        ^
+
+./telekinesis/ik_calc.py:67:1: W293 blank line contains whitespace
+        
+^
+
+./telekinesis/ik_calc.py:69:25: E231 missing whitespace after ','
+        for i in range(0,4):
+                        ^
+
+./telekinesis/ik_calc.py:70:100: E501 line too long (165 > 99 characters)
+            self.ballMbt.append(p.createMultiBody(baseMass=baseMass, baseCollisionShapeIndex=ball_shape, basePosition=basePosition)) # for base and finger tip joints    
+                                                                                                   ^
+
+./telekinesis/ik_calc.py:70:133: E261 at least two spaces before inline comment
+            self.ballMbt.append(p.createMultiBody(baseMass=baseMass, baseCollisionShapeIndex=ball_shape, basePosition=basePosition)) # for base and finger tip joints    
+                                                                                                                                    ^
+
+./telekinesis/ik_calc.py:70:166: W291 trailing whitespace
+            self.ballMbt.append(p.createMultiBody(baseMass=baseMass, baseCollisionShapeIndex=ball_shape, basePosition=basePosition)) # for base and finger tip joints    
+                                                                                                                                                                     ^
+
+./telekinesis/ik_calc.py:73:100: E501 line too long (101 > 99 characters)
+            p.setCollisionFilterGroupMask(self.ballMbt[i], -1, no_collision_group, no_collision_mask)
+                                                                                                   ^
+
+./telekinesis/ik_calc.py:74:73: W291 trailing whitespace
+        p.changeVisualShape(self.ballMbt[0], -1, rgbaColor=[1, 0, 0, 1]) 
+                                                                        ^
+
+./telekinesis/ik_calc.py:75:73: W291 trailing whitespace
+        p.changeVisualShape(self.ballMbt[1], -1, rgbaColor=[0, 1, 0, 1]) 
+                                                                        ^
+
+./telekinesis/ik_calc.py:76:73: W291 trailing whitespace
+        p.changeVisualShape(self.ballMbt[2], -1, rgbaColor=[0, 0, 1, 1])  
+                                                                        ^
+
+./telekinesis/ik_calc.py:78:1: W293 blank line contains whitespace
+        
+^
+
+./telekinesis/ik_calc.py:80:66: E201 whitespace after '('
+        _, current_orientation = p.getBasePositionAndOrientation( self.ballMbt[0])
+                                                                 ^
+
+./telekinesis/ik_calc.py:88:1: W293 blank line contains whitespace
+        
+^
+
+./telekinesis/ik_calc.py:90:9: E265 block comment should start with '# '
+        #gets the data converts it and then computes IK and visualizes
+        ^
+
+./telekinesis/ik_calc.py:92:22: W291 trailing whitespace
+        hand_pos = []  
+                     ^
+
+./telekinesis/ik_calc.py:93:25: E231 missing whitespace after ','
+        for i in range(0,10):
+                        ^
+
+./telekinesis/ik_calc.py:94:100: E501 line too long (205 > 99 characters)
+            hand_pos.append([poses[i].position.x * self.glove_to_leap_mapping_scale * 1.15, poses[i].position.y * self.glove_to_leap_mapping_scale, -poses[i].position.z * self.glove_to_leap_mapping_scale])
+                                                                                                   ^
+
+./telekinesis/ik_calc.py:95:100: E501 line too long (101 > 99 characters)
+        # hand_pos[2][0] = hand_pos[2][0] - 0.02  this isn't great because they won't oppose properly
+                                                                                                   ^
+
+./telekinesis/ik_calc.py:96:49: W291 trailing whitespace
+        # hand_pos[3][0] = hand_pos[3][0] - 0.02    
+                                                ^
+
+./telekinesis/ik_calc.py:99:9: E265 block comment should start with '# '
+        #hand_pos[2][1] = hand_pos[2][1] + 0.002
+        ^
+
+./telekinesis/ik_calc.py:104:1: W293 blank line contains whitespace
+        
+^
+
+./telekinesis/ik_calc.py:106:27: W291 trailing whitespace
+        p.stepSimulation()     
+                          ^
+
+./telekinesis/ik_calc.py:110:1: W293 blank line contains whitespace
+        
+^
+
+./telekinesis/ik_calc.py:113:1: W293 blank line contains whitespace
+        
+^
+
+./telekinesis/ik_calc.py:116:1: W293 blank line contains whitespace
+        
+^
+
+./telekinesis/ik_calc.py:119:1: W293 blank line contains whitespace
+        
+^
+
+./telekinesis/ik_calc.py:139:1: W293 blank line contains whitespace
+        
+^
+
+./telekinesis/ik_calc.py:140:100: E501 line too long (140 > 99 characters)
+        combined_jointPoses = (jointPoses[0:4] + (0.0,) + jointPoses[4:8] + (0.0,) + jointPoses[8:12] + (0.0,) + jointPoses[12:16] + (0.0,))
+                                                                                                   ^
+
+./telekinesis/ik_calc.py:158:9: E265 block comment should start with '# '
+        #real_left_robot_hand_q = np.array([0.0 for _ in range(16)])
+        ^
+
+./telekinesis/ik_calc.py:171:1: E302 expected 2 blank lines, found 1
+def main(args=None):
+^
+
+./telekinesis/ik_calc.py:181:1: E305 expected 2 blank lines after class or function definition, found 1
+if __name__ == "__main__":
+^
+
+1     E114 indentation is not a multiple of 4 (comment)
+1     E201 whitespace after '('
+2     E231 missing whitespace after ','
+2     E251 unexpected spaces around keyword / parameter equals
+1     E261 at least two spaces before inline comment
+9     E265 block comment should start with '# '
+2     E302 expected 2 blank lines, found 0
+1     E305 expected 2 blank lines after class or function definition, found 1
+11    E501 line too long (102 > 99 characters)
+2     F401 'sys' imported but unused
+1     F841 local variable 'small_ball_shape' is assigned to but never used
+11    W291 trailing whitespace
+12    W293 blank line contains whitespace
+
+6 files checked
+56 errors
+
+'E'-type errors: 30
+'F'-type errors: 3
+'W'-type errors: 23
+
+Checked files:
+
+* ./setup.py
+* ./telekinesis/ik_calc.py
+* ./telekinesis/__init__.py
+* ./test/test_pep257.py
+* ./test/test_copyright.py
+* ./test/test_flake8.py
+----------------------------- Captured stderr call -----------------------------
+option --max-complexity: please update from optparse string `type=` to argparse callable `type=` -- this will be an error in the future
+--- generated xml file: /home/justin/glove_ROS/build/telekinesis/pytest.xml ----
+[33m=============================== warnings summary ===============================[0m
+test/test_flake8.py::test_flake8
+test/test_flake8.py::test_flake8
+  Warning: SelectableGroups dict interface is deprecated. Use select.
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+=========================== short test summary info ============================
+FAILED test/test_flake8.py::test_flake8 - AssertionError: Found 56 code style...
+[31m============== [31m[1m1 failed[0m, [32m1 passed[0m, [33m1 skipped[0m, [33m2 warnings[0m[31m in 0.25s[0m[31m ==============[0m

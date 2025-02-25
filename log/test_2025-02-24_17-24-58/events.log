@@ -1,0 +1,700 @@
+[0.000000] (-) TimerEvent: {}
+[0.000132] (glove) JobQueued: {'identifier': 'glove', 'dependencies': OrderedDict([('glove', '/home/justin/glove_ROS/install/glove')])}
+[0.000291] (launch_main) JobQueued: {'identifier': 'launch_main', 'dependencies': OrderedDict([('launch_main', '/home/justin/glove_ROS/install/launch_main')])}
+[0.000311] (telekinesis) JobQueued: {'identifier': 'telekinesis', 'dependencies': OrderedDict([('telekinesis', '/home/justin/glove_ROS/install/telekinesis')])}
+[0.000377] (glove) JobStarted: {'identifier': 'glove'}
+[0.006698] (launch_main) JobStarted: {'identifier': 'launch_main'}
+[0.009889] (telekinesis) JobStarted: {'identifier': 'telekinesis'}
+[0.099464] (-) TimerEvent: {}
+[0.199736] (-) TimerEvent: {}
+[0.239281] (glove) Command: {'cmd': ['/usr/bin/python3', '-m', 'pytest'], 'cwd': '/home/justin/glove_ROS/src/glove', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'justin', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/justin', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'DBUS_STARTER_BUS_TYPE': 'session', 'SYSTEMD_EXEC_PID': '1633', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=6c1394c1d8e427de37241b2a67bd12ea', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/justin/glove_ROS/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'justin', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'justin', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/justin/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/justin-Inspiron-7580:@/tmp/.ICE-unix/1633,unix/justin-Inspiron-7580:/tmp/.ICE-unix/1633', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/7e8c0cbe_82ea_49cc_88fd_e8be24dfff91', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.MOGF22', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.190', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/justin/glove_ROS/install/glove:/home/justin/glove_ROS/install/telekinesis:/home/justin/glove_ROS/install/launch_main:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/justin/glove_ROS/build/glove', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=6c1394c1d8e427de37241b2a67bd12ea', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/justin/glove_ROS/install/glove/lib/python3.10/site-packages:/home/justin/glove_ROS/install/telekinesis/lib/python3.10/site-packages:/home/justin/glove_ROS/install/launch_main/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'PYTHONDONTWRITEBYTECODE': '1', 'PYTEST_ADDOPTS': '--tb=short --junit-xml=/home/justin/glove_ROS/build/glove/pytest.xml --junit-prefix=glove -o cache_dir=/home/justin/glove_ROS/build/glove/.pytest_cache'}, 'shell': False}
+[0.299838] (-) TimerEvent: {}
+[0.400137] (-) TimerEvent: {}
+[0.469927] (launch_main) Command: {'cmd': ['/usr/bin/python3', '-m', 'unittest', '-v'], 'cwd': '/home/justin/glove_ROS/src/launch_main', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'justin', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/justin', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'DBUS_STARTER_BUS_TYPE': 'session', 'SYSTEMD_EXEC_PID': '1633', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=6c1394c1d8e427de37241b2a67bd12ea', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/justin/glove_ROS/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'justin', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'justin', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/justin/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/justin-Inspiron-7580:@/tmp/.ICE-unix/1633,unix/justin-Inspiron-7580:/tmp/.ICE-unix/1633', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/7e8c0cbe_82ea_49cc_88fd_e8be24dfff91', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.MOGF22', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.190', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/justin/glove_ROS/install/launch_main:/home/justin/glove_ROS/install/telekinesis:/home/justin/glove_ROS/install/glove:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/justin/glove_ROS/build/launch_main', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=6c1394c1d8e427de37241b2a67bd12ea', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/justin/glove_ROS/install/launch_main/lib/python3.10/site-packages:/home/justin/glove_ROS/install/telekinesis/lib/python3.10/site-packages:/home/justin/glove_ROS/install/glove/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'PYTHONDONTWRITEBYTECODE': '1'}, 'shell': False}
+[0.500226] (-) TimerEvent: {}
+[0.502620] (glove) StdoutLine: {'line': b'\x1b[1m============================= test session starts ==============================\x1b[0m\n'}
+[0.502912] (glove) StdoutLine: {'line': b'platform linux -- Python 3.10.12, pytest-6.2.5, py-1.10.0, pluggy-0.13.0\n'}
+[0.503018] (launch_main) StderrLine: {'line': b'\n'}
+[0.503088] (launch_main) StderrLine: {'line': b'----------------------------------------------------------------------\n'}
+[0.503141] (launch_main) StderrLine: {'line': b'Ran 0 tests in 0.000s\n'}
+[0.503192] (launch_main) StderrLine: {'line': b'\n'}
+[0.503240] (launch_main) StderrLine: {'line': b'OK\n'}
+[0.507322] (glove) StdoutLine: {'line': b'cachedir: /home/justin/glove_ROS/build/glove/.pytest_cache\n'}
+[0.507505] (glove) StdoutLine: {'line': b'rootdir: /home/justin/glove_ROS/src/glove\n'}
+[0.507618] (glove) StdoutLine: {'line': b'plugins: ament-copyright-0.12.11, ament-xmllint-0.12.11, ament-flake8-0.12.11, ament-pep257-0.12.11, ament-lint-0.12.11, launch-testing-1.0.7, launch-testing-ros-0.19.8, colcon-core-0.18.4, cov-3.0.0\n'}
+[0.578909] (glove) StdoutLine: {'line': b'\x1b[1mcollecting ... \x1b[0m\x1b[1m\n'}
+[0.579095] (glove) StdoutLine: {'line': b'collected 3 items                                                              \x1b[0m\n'}
+[0.579225] (glove) StdoutLine: {'line': b'\n'}
+[0.585299] (glove) StdoutLine: {'line': b'test_copyright.py \x1b[33ms\x1b[0m\x1b[32m                                                      [ 33%]\x1b[0m\n'}
+[0.600314] (-) TimerEvent: {}
+[0.700548] (-) TimerEvent: {}
+[0.704329] (telekinesis) Command: {'cmd': ['/usr/bin/python3', '-m', 'pytest'], 'cwd': '/home/justin/glove_ROS/src/telekinesis', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'justin', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/justin', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'DBUS_STARTER_BUS_TYPE': 'session', 'SYSTEMD_EXEC_PID': '1633', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=6c1394c1d8e427de37241b2a67bd12ea', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/justin/glove_ROS/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'justin', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'justin', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/justin/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/justin-Inspiron-7580:@/tmp/.ICE-unix/1633,unix/justin-Inspiron-7580:/tmp/.ICE-unix/1633', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/7e8c0cbe_82ea_49cc_88fd_e8be24dfff91', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.MOGF22', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.190', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/justin/glove_ROS/install/telekinesis:/home/justin/glove_ROS/install/launch_main:/home/justin/glove_ROS/install/glove:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/justin/glove_ROS/build/telekinesis', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=6c1394c1d8e427de37241b2a67bd12ea', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/justin/glove_ROS/install/telekinesis/lib/python3.10/site-packages:/home/justin/glove_ROS/install/launch_main/lib/python3.10/site-packages:/home/justin/glove_ROS/install/glove/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'PYTHONDONTWRITEBYTECODE': '1', 'PYTEST_ADDOPTS': '--tb=short --junit-xml=/home/justin/glove_ROS/build/telekinesis/pytest.xml --junit-prefix=telekinesis -o cache_dir=/home/justin/glove_ROS/build/telekinesis/.pytest_cache'}, 'shell': False}
+[0.706433] (launch_main) CommandEnded: {'returncode': 0}
+[0.706824] (launch_main) JobEnded: {'identifier': 'launch_main', 'rc': 0}
+[0.732785] (glove) StdoutLine: {'line': b'test_flake8.py \x1b[31mF\x1b[0m\x1b[31m                                                         [ 66%]\x1b[0m\n'}
+[0.751981] (glove) StdoutLine: {'line': b'test_pep257.py \x1b[32m.\x1b[0m\x1b[31m                                                         [100%]\x1b[0m\n'}
+[0.752207] (glove) StdoutLine: {'line': b'\n'}
+[0.752344] (glove) StdoutLine: {'line': b'=================================== FAILURES ===================================\n'}
+[0.752470] (glove) StdoutLine: {'line': b'\x1b[31m\x1b[1m_________________________________ test_flake8 __________________________________\x1b[0m\n'}
+[0.752566] (glove) StdoutLine: {'line': b'\x1b[1m\x1b[31mtest_flake8.py\x1b[0m:23: in test_flake8\n'}
+[0.790078] (glove) StdoutLine: {'line': b'    \x1b[94massert\x1b[39;49;00m rc == \x1b[94m0\x1b[39;49;00m, \\\n'}
+[0.791053] (glove) StdoutLine: {'line': b'\x1b[1m\x1b[31mE   AssertionError: Found 44 code style errors / warnings:\x1b[0m\n'}
+[0.791598] (glove) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:6:1: F401 'rclpy.qos.QoSProfile' imported but unused\x1b[0m\n"}
+[0.791696] (glove) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:6:1: F401 'rclpy.qos.QoSReliabilityPolicy' imported but unused\x1b[0m\n"}
+[0.791785] (glove) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:11:100: E501 line too long (129 > 99 characters)\x1b[0m\n'}
+[0.791873] (glove) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:13:56: W291 trailing whitespace\x1b[0m\n'}
+[0.791960] (glove) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:17:16: E222 multiple spaces after operator\x1b[0m\n'}
+[0.792047] (glove) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:20:1: E302 expected 2 blank lines, found 1\x1b[0m\n'}
+[0.792147] (glove) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:23:9: E265 block comment should start with '# '\x1b[0m\n"}
+[0.792252] (glove) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:25:47: W291 trailing whitespace\x1b[0m\n'}
+[0.792337] (glove) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:26:51: W291 trailing whitespace\x1b[0m\n'}
+[0.792422] (glove) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:27:40: W291 trailing whitespace\x1b[0m\n'}
+[0.792507] (glove) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:36:9: E265 block comment should start with '# '\x1b[0m\n"}
+[0.792592] (glove) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:41:5: E303 too many blank lines (2)\x1b[0m\n'}
+[0.792677] (glove) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:41:5: E265 block comment should start with '# '\x1b[0m\n"}
+[0.792762] (glove) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:41:100: E501 line too long (224 > 99 characters)\x1b[0m\n'}
+[0.792847] (glove) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:42:5: E301 expected 1 blank line, found 0\x1b[0m\n'}
+[0.792932] (glove) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:44:25: E231 missing whitespace after ','\x1b[0m\n"}
+[0.793083] (glove) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:45:100: E501 line too long (151 > 99 characters)\x1b[0m\n'}
+[0.793168] (glove) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:45:103: E262 inline comment should start with '# '\x1b[0m\n"}
+[0.793253] (glove) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:46:100: E501 line too long (132 > 99 characters)\x1b[0m\n'}
+[0.793338] (glove) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:52:66: W291 trailing whitespace\x1b[0m\n'}
+[0.793433] (glove) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:58:5: E265 block comment should start with '# '\x1b[0m\n"}
+[0.793519] (glove) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:58:100: E501 line too long (198 > 99 characters)\x1b[0m\n'}
+[0.793604] (glove) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:59:5: E301 expected 1 blank line, found 0\x1b[0m\n'}
+[0.793690] (glove) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:61:9: E265 block comment should start with '# '\x1b[0m\n"}
+[0.793779] (glove) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:61:58: W291 trailing whitespace\x1b[0m\n'}
+[0.793864] (glove) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:62:9: E265 block comment should start with '# '\x1b[0m\n"}
+[0.793949] (glove) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:62:100: E501 line too long (101 > 99 characters)\x1b[0m\n'}
+[0.794034] (glove) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:63:9: E265 block comment should start with '# '\x1b[0m\n"}
+[0.794119] (glove) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:64:58: W291 trailing whitespace\x1b[0m\n'}
+[0.794204] (glove) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:66:100: E501 line too long (151 > 99 characters)\x1b[0m\n'}
+[0.794291] (glove) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:66:103: E262 inline comment should start with '# '\x1b[0m\n"}
+[0.794377] (glove) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:75:52: W291 trailing whitespace\x1b[0m\n'}
+[0.794471] (glove) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:76:27: W291 trailing whitespace\x1b[0m\n'}
+[0.794557] (glove) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:83:53: W291 trailing whitespace\x1b[0m\n'}
+[0.794642] (glove) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:85:9: E265 block comment should start with '# '\x1b[0m\n"}
+[0.794727] (glove) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:87:34: W291 trailing whitespace\x1b[0m\n'}
+[0.794812] (glove) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:90:17: E265 block comment should start with '# '\x1b[0m\n"}
+[0.794896] (glove) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:93:57: E231 missing whitespace after ','\x1b[0m\n"}
+[0.794992] (glove) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:95:57: E231 missing whitespace after ','\x1b[0m\n"}
+[0.795110] (glove) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:97:17: E265 block comment should start with '# '\x1b[0m\n"}
+[0.795227] (glove) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:103:17: E265 block comment should start with '# '\x1b[0m\n"}
+[0.795346] (glove) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:107:13: F841 local variable 'e' is assigned to but never used\x1b[0m\n"}
+[0.795466] (glove) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:117:1: W293 blank line contains whitespace\x1b[0m\n'}
+[0.795586] (glove) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./glove/read_and_send_zmq.py:120:11: W292 no newline at end of file\x1b[0m\n'}
+[0.795705] (glove) StdoutLine: {'line': b'\x1b[1m\x1b[31mE   assert 1 == 0\x1b[0m\n'}
+[0.795824] (glove) StdoutLine: {'line': b'----------------------------- Captured stdout call -----------------------------\n'}
+[0.795947] (glove) StdoutLine: {'line': b'\n'}
+[0.796065] (glove) StdoutLine: {'line': b"./glove/read_and_send_zmq.py:6:1: F401 'rclpy.qos.QoSProfile' imported but unused\n"}
+[0.796203] (glove) StdoutLine: {'line': b'from rclpy.qos import QoSProfile, QoSReliabilityPolicy\n'}
+[0.796324] (glove) StdoutLine: {'line': b'^\n'}
+[0.796441] (glove) StdoutLine: {'line': b'\n'}
+[0.796554] (glove) StdoutLine: {'line': b"./glove/read_and_send_zmq.py:6:1: F401 'rclpy.qos.QoSReliabilityPolicy' imported but unused\n"}
+[0.796640] (glove) StdoutLine: {'line': b'from rclpy.qos import QoSProfile, QoSReliabilityPolicy\n'}
+[0.796728] (glove) StdoutLine: {'line': b'^\n'}
+[0.796813] (glove) StdoutLine: {'line': b'\n'}
+[0.796898] (glove) StdoutLine: {'line': b'./glove/read_and_send_zmq.py:11:100: E501 line too long (129 > 99 characters)\n'}
+[0.796983] (glove) StdoutLine: {'line': b"'''\n"}
+[0.797069] (glove) StdoutLine: {'line': b'This reads from websockets from Manus SDK and republishes to each glove topic\n'}
+[0.797163] (glove) StdoutLine: {'line': b'\n'}
+[0.797248] (glove) StdoutLine: {'line': b'The joint level data is what Manus estimates your skeleton as in the order of thumb to pinky and MCP side, MCP forward, PIP, DIP.\n'}
+[0.797335] (glove) StdoutLine: {'line': b'\n'}
+[0.797420] (glove) StdoutLine: {'line': b'The full skeleton is the xyz quaternion of every single \n'}
+[0.797506] (glove) StdoutLine: {'line': b"'''\n"}
+[0.797591] (glove) StdoutLine: {'line': b'   \n'}
+[0.797676] (glove) StdoutLine: {'line': b'                                                                             \n'}
+[0.797762] (glove) StdoutLine: {'line': b'\n'}
+[0.797847] (glove) StdoutLine: {'line': b'                ^\n'}
+[0.797932] (glove) StdoutLine: {'line': b'\n'}
+[0.798018] (glove) StdoutLine: {'line': b'./glove/read_and_send_zmq.py:13:56: W291 trailing whitespace\n'}
+[0.798103] (glove) StdoutLine: {'line': b"'''\n"}
+[0.798188] (glove) StdoutLine: {'line': b'This reads from websockets from Manus SDK and republishes to each glove topic\n'}
+[0.798274] (glove) StdoutLine: {'line': b'\n'}
+[0.798358] (glove) StdoutLine: {'line': b'The joint level data is what Manus estimates your skeleton as in the order of thumb to pinky and MCP side, MCP forward, PIP, DIP.\n'}
+[0.798446] (glove) StdoutLine: {'line': b'\n'}
+[0.798530] (glove) StdoutLine: {'line': b'The full skeleton is the xyz quaternion of every single \n'}
+[0.798615] (glove) StdoutLine: {'line': b"'''\n"}
+[0.798699] (glove) StdoutLine: {'line': b'   \n'}
+[0.798782] (glove) StdoutLine: {'line': b'                                                   ^\n'}
+[0.798867] (glove) StdoutLine: {'line': b'\n'}
+[0.798951] (glove) StdoutLine: {'line': b'./glove/read_and_send_zmq.py:17:16: E222 multiple spaces after operator\n'}
+[0.799042] (glove) StdoutLine: {'line': b'LEFT_GLOVE_SN =  "45a7fc8f"\n'}
+[0.799126] (glove) StdoutLine: {'line': b'               ^\n'}
+[0.799210] (glove) StdoutLine: {'line': b'\n'}
+[0.799297] (glove) StdoutLine: {'line': b'./glove/read_and_send_zmq.py:20:1: E302 expected 2 blank lines, found 1\n'}
+[0.799381] (glove) StdoutLine: {'line': b'class GloveReader(Node):\n'}
+[0.799465] (glove) StdoutLine: {'line': b'^\n'}
+[0.799548] (glove) StdoutLine: {'line': b'\n'}
+[0.799632] (glove) StdoutLine: {'line': b"./glove/read_and_send_zmq.py:23:9: E265 block comment should start with '# '\n"}
+[0.799716] (glove) StdoutLine: {'line': b'        #Connect to Server\n'}
+[0.799800] (glove) StdoutLine: {'line': b'        ^\n'}
+[0.799884] (glove) StdoutLine: {'line': b'\n'}
+[0.799968] (glove) StdoutLine: {'line': b'./glove/read_and_send_zmq.py:25:47: W291 trailing whitespace\n'}
+[0.800052] (glove) StdoutLine: {'line': b'        self.socket = context.socket(zmq.PULL)  \n'}
+[0.800184] (glove) StdoutLine: {'line': b'                                              ^\n'}
+[0.800295] (glove) StdoutLine: {'line': b'\n'}
+[0.800379] (glove) StdoutLine: {'line': b'./glove/read_and_send_zmq.py:26:51: W291 trailing whitespace\n'}
+[0.800463] (glove) StdoutLine: {'line': b'        self.socket.setsockopt(zmq.CONFLATE, True)     \n'}
+[0.800544] (-) TimerEvent: {}
+[0.800642] (glove) StdoutLine: {'line': b'                                                  ^\n'}
+[0.800730] (glove) StdoutLine: {'line': b'\n'}
+[0.800814] (glove) StdoutLine: {'line': b'./glove/read_and_send_zmq.py:27:40: W291 trailing whitespace\n'}
+[0.800898] (glove) StdoutLine: {'line': b'        self.socket.connect(IP_ADDRESS)       \n'}
+[0.800988] (glove) StdoutLine: {'line': b'                                       ^\n'}
+[0.801074] (glove) StdoutLine: {'line': b'\n'}
+[0.801158] (glove) StdoutLine: {'line': b"./glove/read_and_send_zmq.py:36:9: E265 block comment should start with '# '\n"}
+[0.801243] (glove) StdoutLine: {'line': b'        #replace with your gloves (all lowercase letters)\n'}
+[0.801327] (glove) StdoutLine: {'line': b'        ^\n'}
+[0.801411] (glove) StdoutLine: {'line': b'\n'}
+[0.801494] (glove) StdoutLine: {'line': b'./glove/read_and_send_zmq.py:41:5: E303 too many blank lines (2)\n'}
+[0.801588] (glove) StdoutLine: {'line': b'    #If you set a flag in the C++ code, you can send all the data that comes from the raw skeleton of the glove.  This data is from thumb to pinky, across all joints from palm to fingertip.   This can slow things down though\n'}
+[0.801674] (glove) StdoutLine: {'line': b'    ^\n'}
+[0.801758] (glove) StdoutLine: {'line': b'\n'}
+[0.801843] (glove) StdoutLine: {'line': b"./glove/read_and_send_zmq.py:41:5: E265 block comment should start with '# '\n"}
+[0.801927] (glove) StdoutLine: {'line': b'    #If you set a flag in the C++ code, you can send all the data that comes from the raw skeleton of the glove.  This data is from thumb to pinky, across all joints from palm to fingertip.   This can slow things down though\n'}
+[0.802013] (glove) StdoutLine: {'line': b'    ^\n'}
+[0.802096] (glove) StdoutLine: {'line': b'\n'}
+[0.802180] (glove) StdoutLine: {'line': b'./glove/read_and_send_zmq.py:41:100: E501 line too long (224 > 99 characters)\n'}
+[0.802264] (glove) StdoutLine: {'line': b'    #If you set a flag in the C++ code, you can send all the data that comes from the raw skeleton of the glove.  This data is from thumb to pinky, across all joints from palm to fingertip.   This can slow things down though\n'}
+[0.802431] (glove) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[0.802557] (glove) StdoutLine: {'line': b'\n'}
+[0.802705] (glove) StdoutLine: {'line': b'./glove/read_and_send_zmq.py:42:5: E301 expected 1 blank line, found 0\n'}
+[0.802842] (glove) StdoutLine: {'line': b'    def parse_full_skeleton_and_send(self, data):\n'}
+[0.802980] (glove) StdoutLine: {'line': b'    ^\n'}
+[0.803130] (glove) StdoutLine: {'line': b'\n'}
+[0.803266] (glove) StdoutLine: {'line': b"./glove/read_and_send_zmq.py:44:25: E231 missing whitespace after ','\n"}
+[0.803390] (glove) StdoutLine: {'line': b'        for i in range(0,25):\n'}
+[0.803578] (glove) StdoutLine: {'line': b'                        ^\n'}
+[0.803715] (glove) StdoutLine: {'line': b'\n'}
+[0.803878] (glove) StdoutLine: {'line': b'./glove/read_and_send_zmq.py:45:100: E501 line too long (151 > 99 characters)\n'}
+[0.803962] (glove) StdoutLine: {'line': b"            position = Point(x=float(data[1 + i*7]), y=float(data[2 + i*7]), z=float(data[3 + i*7]))  #the first ID is right or left glove don't forget\n"}
+[0.804047] (glove) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[0.804143] (glove) StdoutLine: {'line': b'\n'}
+[0.804201] (glove) StdoutLine: {'line': b"./glove/read_and_send_zmq.py:45:103: E262 inline comment should start with '# '\n"}
+[0.804251] (glove) StdoutLine: {'line': b"            position = Point(x=float(data[1 + i*7]), y=float(data[2 + i*7]), z=float(data[3 + i*7]))  #the first ID is right or left glove don't forget\n"}
+[0.804300] (glove) StdoutLine: {'line': b'                                                                                                      ^\n'}
+[0.804349] (glove) StdoutLine: {'line': b'\n'}
+[0.804401] (glove) StdoutLine: {'line': b'./glove/read_and_send_zmq.py:46:100: E501 line too long (132 > 99 characters)\n'}
+[0.804449] (glove) StdoutLine: {'line': b'            orientation = Quaternion(x=float(data[4 + i*7]), y=float(data[5 + i*7]), z=float(data[6 + i*7]), w=float(data[7 + i*7]))\n'}
+[0.804497] (glove) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[0.804545] (glove) StdoutLine: {'line': b'\n'}
+[0.804592] (glove) StdoutLine: {'line': b'./glove/read_and_send_zmq.py:52:66: W291 trailing whitespace\n'}
+[0.804639] (glove) StdoutLine: {'line': b'            self.pub_skeleton_left_full.publish(output_array_msg) \n'}
+[0.804686] (glove) StdoutLine: {'line': b'                                                                 ^\n'}
+[0.804734] (glove) StdoutLine: {'line': b'\n'}
+[0.804780] (glove) StdoutLine: {'line': b"./glove/read_and_send_zmq.py:58:5: E265 block comment should start with '# '\n"}
+[0.804834] (glove) StdoutLine: {'line': b'    #This the dexcap style data, you only get the fingertip and the previous joint xyz as the data and then you can send that.  It goes from thumb_middle, thumb_tip, index_middle, index_tip etc.etc.\n'}
+[0.804962] (glove) StdoutLine: {'line': b'    ^\n'}
+[0.805011] (glove) StdoutLine: {'line': b'\n'}
+[0.805060] (glove) StdoutLine: {'line': b'./glove/read_and_send_zmq.py:58:100: E501 line too long (198 > 99 characters)\n'}
+[0.805108] (glove) StdoutLine: {'line': b'    #This the dexcap style data, you only get the fingertip and the previous joint xyz as the data and then you can send that.  It goes from thumb_middle, thumb_tip, index_middle, index_tip etc.etc.\n'}
+[0.805156] (glove) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[0.805203] (glove) StdoutLine: {'line': b'\n'}
+[0.805250] (glove) StdoutLine: {'line': b'./glove/read_and_send_zmq.py:59:5: E301 expected 1 blank line, found 0\n'}
+[0.805298] (glove) StdoutLine: {'line': b'    def parse_short_skeleton_and_send(self, data):\n'}
+[0.805344] (glove) StdoutLine: {'line': b'    ^\n'}
+[0.805392] (glove) StdoutLine: {'line': b'\n'}
+[0.805439] (glove) StdoutLine: {'line': b"./glove/read_and_send_zmq.py:61:9: E265 block comment should start with '# '\n"}
+[0.805486] (glove) StdoutLine: {'line': b'        #short_idx = [3, 4, 8, 9, 13, 14, 18, 19, 23, 24] \n'}
+[0.805533] (glove) StdoutLine: {'line': b'        ^\n'}
+[0.805580] (glove) StdoutLine: {'line': b'\n'}
+[0.805626] (glove) StdoutLine: {'line': b'./glove/read_and_send_zmq.py:61:58: W291 trailing whitespace\n'}
+[0.805673] (glove) StdoutLine: {'line': b'        #short_idx = [3, 4, 8, 9, 13, 14, 18, 19, 23, 24] \n'}
+[0.805719] (glove) StdoutLine: {'line': b'                                                         ^\n'}
+[0.805766] (glove) StdoutLine: {'line': b'\n'}
+[0.805812] (glove) StdoutLine: {'line': b"./glove/read_and_send_zmq.py:62:9: E265 block comment should start with '# '\n"}
+[0.805859] (glove) StdoutLine: {'line': b'        ##Right now the integrated mode is in a different ordering, pinky, thumb, index, ring, middle\n'}
+[0.805906] (glove) StdoutLine: {'line': b'        ^\n'}
+[0.805953] (glove) StdoutLine: {'line': b'\n'}
+[0.806000] (glove) StdoutLine: {'line': b'./glove/read_and_send_zmq.py:62:100: E501 line too long (101 > 99 characters)\n'}
+[0.806047] (glove) StdoutLine: {'line': b'        ##Right now the integrated mode is in a different ordering, pinky, thumb, index, ring, middle\n'}
+[0.806095] (glove) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[0.806142] (glove) StdoutLine: {'line': b'\n'}
+[0.806189] (glove) StdoutLine: {'line': b"./glove/read_and_send_zmq.py:63:9: E265 block comment should start with '# '\n"}
+[0.806236] (glove) StdoutLine: {'line': b'        ##Will be fixed to match the SDK in a future release\n'}
+[0.806282] (glove) StdoutLine: {'line': b'        ^\n'}
+[0.806329] (glove) StdoutLine: {'line': b'\n'}
+[0.806375] (glove) StdoutLine: {'line': b'./glove/read_and_send_zmq.py:64:58: W291 trailing whitespace\n'}
+[0.806422] (glove) StdoutLine: {'line': b'        short_idx = [23, 24, 4, 5, 9, 10, 19, 20, 14, 15] \n'}
+[0.806469] (glove) StdoutLine: {'line': b'                                                         ^\n'}
+[0.806516] (glove) StdoutLine: {'line': b'\n'}
+[0.806563] (glove) StdoutLine: {'line': b'./glove/read_and_send_zmq.py:66:100: E501 line too long (151 > 99 characters)\n'}
+[0.806610] (glove) StdoutLine: {'line': b"            position = Point(x=float(data[1 + i*7]), y=float(data[2 + i*7]), z=float(data[3 + i*7]))  #the first ID is right or left glove don't forget\n"}
+[0.806658] (glove) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[0.806704] (glove) StdoutLine: {'line': b'\n'}
+[0.806751] (glove) StdoutLine: {'line': b"./glove/read_and_send_zmq.py:66:103: E262 inline comment should start with '# '\n"}
+[0.806802] (glove) StdoutLine: {'line': b"            position = Point(x=float(data[1 + i*7]), y=float(data[2 + i*7]), z=float(data[3 + i*7]))  #the first ID is right or left glove don't forget\n"}
+[0.806855] (glove) StdoutLine: {'line': b'                                                                                                      ^\n'}
+[0.806902] (glove) StdoutLine: {'line': b'\n'}
+[0.806949] (glove) StdoutLine: {'line': b'./glove/read_and_send_zmq.py:75:52: W291 trailing whitespace\n'}
+[0.806995] (glove) StdoutLine: {'line': b'            print("Glove serial number incorrect!")  \n'}
+[0.807042] (glove) StdoutLine: {'line': b'                                                   ^\n'}
+[0.807088] (glove) StdoutLine: {'line': b'\n'}
+[0.807134] (glove) StdoutLine: {'line': b'./glove/read_and_send_zmq.py:76:27: W291 trailing whitespace\n'}
+[0.807180] (glove) StdoutLine: {'line': b'            print(data[0])      \n'}
+[0.807226] (glove) StdoutLine: {'line': b'                          ^\n'}
+[0.807273] (glove) StdoutLine: {'line': b'\n'}
+[0.807319] (glove) StdoutLine: {'line': b'./glove/read_and_send_zmq.py:83:53: W291 trailing whitespace\n'}
+[0.807365] (glove) StdoutLine: {'line': b'        rclpy.spin_once(glove_reader, timeout_sec=0)  \n'}
+[0.807411] (glove) StdoutLine: {'line': b'                                                    ^\n'}
+[0.807458] (glove) StdoutLine: {'line': b'\n'}
+[0.807505] (glove) StdoutLine: {'line': b"./glove/read_and_send_zmq.py:85:9: E265 block comment should start with '# '\n"}
+[0.807552] (glove) StdoutLine: {'line': b'        #receive the message from the socket\n'}
+[0.807598] (glove) StdoutLine: {'line': b'        ^\n'}
+[0.807645] (glove) StdoutLine: {'line': b'\n'}
+[0.807691] (glove) StdoutLine: {'line': b'./glove/read_and_send_zmq.py:87:34: W291 trailing whitespace\n'}
+[0.807738] (glove) StdoutLine: {'line': b'        data = message.split(",")  \n'}
+[0.807786] (glove) StdoutLine: {'line': b'                                 ^\n'}
+[0.807832] (glove) StdoutLine: {'line': b'\n'}
+[0.807878] (glove) StdoutLine: {'line': b"./glove/read_and_send_zmq.py:90:17: E265 block comment should start with '# '\n"}
+[0.807925] (glove) StdoutLine: {'line': b'                #If joint level data\n'}
+[0.807972] (glove) StdoutLine: {'line': b'                ^\n'}
+[0.808019] (glove) StdoutLine: {'line': b'\n'}
+[0.808066] (glove) StderrLine: {'line': b'\x1b[33m=============================== warnings summary ===============================\x1b[0m\n'}
+[0.808140] (glove) StderrLine: {'line': b'test_flake8.py::test_flake8\n'}
+[0.808194] (glove) StderrLine: {'line': b'test_flake8.py::test_flake8\n'}
+[0.808241] (glove) StderrLine: {'line': b'  Warning: SelectableGroups dict interface is deprecated. Use select.\n'}
+[0.808290] (glove) StderrLine: {'line': b'\n'}
+[0.808337] (glove) StderrLine: {'line': b'-- Docs: https://docs.pytest.org/en/stable/warnings.html\n'}
+[0.808383] (glove) StdoutLine: {'line': b"./glove/read_and_send_zmq.py:93:57: E231 missing whitespace after ','\n"}
+[0.808431] (glove) StdoutLine: {'line': b'                    stater_msg.position = list(map(float,data[0:20]))\n'}
+[0.808478] (glove) StdoutLine: {'line': b'                                                        ^\n'}
+[0.808526] (glove) StdoutLine: {'line': b'\n'}
+[0.808574] (glove) StdoutLine: {'line': b"./glove/read_and_send_zmq.py:95:57: E231 missing whitespace after ','\n"}
+[0.808622] (glove) StdoutLine: {'line': b'                    stater_msg.position = list(map(float,data[20:40]))\n'}
+[0.808670] (glove) StdoutLine: {'line': b'                                                        ^\n'}
+[0.808718] (glove) StdoutLine: {'line': b'\n'}
+[0.808764] (glove) StdoutLine: {'line': b"./glove/read_and_send_zmq.py:97:17: E265 block comment should start with '# '\n"}
+[0.808813] (glove) StdoutLine: {'line': b'                #If full skeleton data two hands\n'}
+[0.808860] (glove) StdoutLine: {'line': b'                ^\n'}
+[0.808908] (glove) StdoutLine: {'line': b'\n'}
+[0.808955] (glove) StdoutLine: {'line': b"./glove/read_and_send_zmq.py:103:17: E265 block comment should start with '# '\n"}
+[0.809007] (glove) StdoutLine: {'line': b'                #If full skeleton data one hand\n'}
+[0.809055] (glove) StdoutLine: {'line': b'                ^\n'}
+[0.809102] (glove) StdoutLine: {'line': b'\n'}
+[0.809150] (glove) StdoutLine: {'line': b"./glove/read_and_send_zmq.py:107:13: F841 local variable 'e' is assigned to but never used\n"}
+[0.809199] (glove) StdoutLine: {'line': b'            except KeyboardInterrupt as e:\n'}
+[0.809246] (glove) StdoutLine: {'line': b'            ^\n'}
+[0.809293] (glove) StdoutLine: {'line': b'\n'}
+[0.809340] (glove) StdoutLine: {'line': b'./glove/read_and_send_zmq.py:117:1: W293 blank line contains whitespace\n'}
+[0.809388] (glove) StdoutLine: {'line': b'    \n'}
+[0.809435] (glove) StdoutLine: {'line': b'^\n'}
+[0.809483] (glove) StdoutLine: {'line': b'\n'}
+[0.809530] (glove) StdoutLine: {'line': b'./glove/read_and_send_zmq.py:120:11: W292 no newline at end of file\n'}
+[0.809578] (glove) StdoutLine: {'line': b'    main()          ^\n'}
+[0.809646] (glove) StdoutLine: {'line': b'\n'}
+[0.809707] (glove) StdoutLine: {'line': b'1     E222 multiple spaces after operator\n'}
+[0.809782] (glove) StdoutLine: {'line': b"3     E231 missing whitespace after ','\n"}
+[0.809883] (glove) StdoutLine: {'line': b"2     E262 inline comment should start with '# '\n"}
+[0.809983] (glove) StdoutLine: {'line': b"11    E265 block comment should start with '# '\n"}
+[0.810096] (glove) StdoutLine: {'line': b'2     E301 expected 1 blank line, found 0\n'}
+[0.810170] (glove) StdoutLine: {'line': b'1     E302 expected 2 blank lines, found 1\n'}
+[0.810245] (glove) StdoutLine: {'line': b'1     E303 too many blank lines (2)\n'}
+[0.810319] (glove) StdoutLine: {'line': b'7     E501 line too long (129 > 99 characters)\n'}
+[0.810395] (glove) StdoutLine: {'line': b"2     F401 'rclpy.qos.QoSProfile' imported but unused\n"}
+[0.810482] (glove) StdoutLine: {'line': b"1     F841 local variable 'e' is assigned to but never used\n"}
+[0.810557] (glove) StdoutLine: {'line': b'11    W291 trailing whitespace\n'}
+[0.810632] (glove) StdoutLine: {'line': b'1     W292 no newline at end of file\n'}
+[0.810706] (glove) StdoutLine: {'line': b'1     W293 blank line contains whitespace\n'}
+[0.810818] (glove) StdoutLine: {'line': b'\n'}
+[0.810916] (glove) StdoutLine: {'line': b'6 files checked\n'}
+[0.811016] (glove) StdoutLine: {'line': b'44 errors\n'}
+[0.811092] (glove) StdoutLine: {'line': b'\n'}
+[0.811196] (glove) StdoutLine: {'line': b"'E'-type errors: 28\n"}
+[0.811245] (glove) StdoutLine: {'line': b"'F'-type errors: 3\n"}
+[0.811293] (glove) StdoutLine: {'line': b"'W'-type errors: 13\n"}
+[0.811340] (glove) StdoutLine: {'line': b'\n'}
+[0.811387] (glove) StdoutLine: {'line': b'Checked files:\n'}
+[0.811434] (glove) StdoutLine: {'line': b'\n'}
+[0.811482] (glove) StdoutLine: {'line': b'* ./test_pep257.py\n'}
+[0.811530] (glove) StdoutLine: {'line': b'* ./test_copyright.py\n'}
+[0.811577] (glove) StdoutLine: {'line': b'* ./setup.py\n'}
+[0.811637] (glove) StdoutLine: {'line': b'* ./test_flake8.py\n'}
+[0.811686] (glove) StdoutLine: {'line': b'* ./glove/__init__.py\n'}
+[0.811734] (glove) StdoutLine: {'line': b'* ./glove/read_and_send_zmq.py\n'}
+[0.811782] (glove) StdoutLine: {'line': b'----------------------------- Captured stderr call -----------------------------\n'}
+[0.811831] (glove) StdoutLine: {'line': b'option --max-complexity: please update from optparse string `type=` to argparse callable `type=` -- this will be an error in the future\n'}
+[0.811881] (glove) StdoutLine: {'line': b'------ generated xml file: /home/justin/glove_ROS/build/glove/pytest.xml -------\n'}
+[0.811930] (glove) StdoutLine: {'line': b'=========================== short test summary info ============================\n'}
+[0.811978] (glove) StdoutLine: {'line': b'FAILED test_flake8.py::test_flake8 - AssertionError: Found 44 code style erro...\n'}
+[0.812027] (glove) StdoutLine: {'line': b'\x1b[31m============== \x1b[31m\x1b[1m1 failed\x1b[0m, \x1b[32m1 passed\x1b[0m, \x1b[33m1 skipped\x1b[0m, \x1b[33m2 warnings\x1b[0m\x1b[31m in 0.29s\x1b[0m\x1b[31m ==============\x1b[0m\n'}
+[0.858571] (glove) CommandEnded: {'returncode': 1}
+[0.858916] (glove) TestFailure: {'identifier': 'glove'}
+[0.858943] (glove) JobEnded: {'identifier': 'glove', 'rc': 0}
+[0.900637] (-) TimerEvent: {}
+[0.963167] (telekinesis) StdoutLine: {'line': b'\x1b[1m============================= test session starts ==============================\x1b[0m\n'}
+[0.963314] (telekinesis) StdoutLine: {'line': b'platform linux -- Python 3.10.12, pytest-6.2.5, py-1.10.0, pluggy-0.13.0\n'}
+[0.967046] (telekinesis) StdoutLine: {'line': b'cachedir: /home/justin/glove_ROS/build/telekinesis/.pytest_cache\n'}
+[0.967113] (telekinesis) StdoutLine: {'line': b'rootdir: /home/justin/glove_ROS/src/telekinesis\n'}
+[0.967168] (telekinesis) StdoutLine: {'line': b'plugins: ament-copyright-0.12.11, ament-xmllint-0.12.11, ament-flake8-0.12.11, ament-pep257-0.12.11, ament-lint-0.12.11, launch-testing-1.0.7, launch-testing-ros-0.19.8, colcon-core-0.18.4, cov-3.0.0\n'}
+[1.000745] (-) TimerEvent: {}
+[1.025366] (telekinesis) StdoutLine: {'line': b'\x1b[1mcollecting ... \x1b[0m\x1b[1m\n'}
+[1.025505] (telekinesis) StdoutLine: {'line': b'collected 3 items                                                              \x1b[0m\n'}
+[1.025688] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.032116] (telekinesis) StdoutLine: {'line': b'test/test_copyright.py \x1b[33ms\x1b[0m\x1b[32m                                                 [ 33%]\x1b[0m\n'}
+[1.100837] (-) TimerEvent: {}
+[1.159047] (telekinesis) StdoutLine: {'line': b'test/test_flake8.py \x1b[31mF\x1b[0m\x1b[31m                                                    [ 66%]\x1b[0m\n'}
+[1.182522] (telekinesis) StdoutLine: {'line': b'test/test_pep257.py \x1b[32m.\x1b[0m\x1b[31m                                                    [100%]\x1b[0m\n'}
+[1.182797] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.182909] (telekinesis) StdoutLine: {'line': b'=================================== FAILURES ===================================\n'}
+[1.183011] (telekinesis) StdoutLine: {'line': b'\x1b[31m\x1b[1m_________________________________ test_flake8 __________________________________\x1b[0m\n'}
+[1.183114] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mtest/test_flake8.py\x1b[0m:23: in test_flake8\n'}
+[1.200906] (-) TimerEvent: {}
+[1.215966] (telekinesis) StdoutLine: {'line': b'    \x1b[94massert\x1b[39;49;00m rc == \x1b[94m0\x1b[39;49;00m, \\\n'}
+[1.216253] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE   AssertionError: Found 56 code style errors / warnings:\x1b[0m\n'}
+[1.216449] (telekinesis) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:10:1: F401 'sys' imported but unused\x1b[0m\n"}
+[1.217099] (telekinesis) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:11:1: F401 'ament_index_python.packages.get_package_share_directory' imported but unused\x1b[0m\n"}
+[1.217240] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:15:100: E501 line too long (102 > 99 characters)\x1b[0m\n'}
+[1.217345] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:15:103: W291 trailing whitespace\x1b[0m\n'}
+[1.217456] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:17:100: E501 line too long (101 > 99 characters)\x1b[0m\n'}
+[1.217570] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:19:1: E302 expected 2 blank lines, found 0\x1b[0m\n'}
+[1.217663] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:21:35: W291 trailing whitespace\x1b[0m\n'}
+[1.217765] (telekinesis) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:23:9: E265 block comment should start with '# '\x1b[0m\n"}
+[1.217865] (telekinesis) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:24:9: E265 block comment should start with '# '\x1b[0m\n"}
+[1.217964] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:26:31: W291 trailing whitespace\x1b[0m\n'}
+[1.218064] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:32:1: W293 blank line contains whitespace\x1b[0m\n'}
+[1.218177] (telekinesis) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:34:9: E265 block comment should start with '# '\x1b[0m\n"}
+[1.218280] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:39:25: E251 unexpected spaces around keyword / parameter equals\x1b[0m\n'}
+[1.218383] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:39:27: E251 unexpected spaces around keyword / parameter equals\x1b[0m\n'}
+[1.218487] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:41:1: W293 blank line contains whitespace\x1b[0m\n'}
+[1.218587] (telekinesis) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:42:9: E265 block comment should start with '# '\x1b[0m\n"}
+[1.218682] (telekinesis) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:44:13: E265 block comment should start with '# '\x1b[0m\n"}
+[1.218782] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:45:100: E501 line too long (100 > 99 characters)\x1b[0m\n'}
+[1.218879] (telekinesis) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:46:13: E265 block comment should start with '# '\x1b[0m\n"}
+[1.218979] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:47:100: E501 line too long (110 > 99 characters)\x1b[0m\n'}
+[1.219081] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:48:14: W291 trailing whitespace\x1b[0m\n'}
+[1.219176] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:49:100: E501 line too long (101 > 99 characters)\x1b[0m\n'}
+[1.219273] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:50:100: E501 line too long (110 > 99 characters)\x1b[0m\n'}
+[1.219377] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:51:8: E114 indentation is not a multiple of 4 (comment)\x1b[0m\n'}
+[1.219482] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:58:1: W293 blank line contains whitespace\x1b[0m\n'}
+[1.219587] (telekinesis) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:62:9: F841 local variable 'small_ball_shape' is assigned to but never used\x1b[0m\n"}
+[1.219693] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:67:1: W293 blank line contains whitespace\x1b[0m\n'}
+[1.219796] (telekinesis) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:69:25: E231 missing whitespace after ','\x1b[0m\n"}
+[1.219900] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:70:100: E501 line too long (165 > 99 characters)\x1b[0m\n'}
+[1.220001] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:70:133: E261 at least two spaces before inline comment\x1b[0m\n'}
+[1.220099] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:70:166: W291 trailing whitespace\x1b[0m\n'}
+[1.220226] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:73:100: E501 line too long (101 > 99 characters)\x1b[0m\n'}
+[1.220334] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:74:73: W291 trailing whitespace\x1b[0m\n'}
+[1.220434] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:75:73: W291 trailing whitespace\x1b[0m\n'}
+[1.220530] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:76:73: W291 trailing whitespace\x1b[0m\n'}
+[1.220627] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:78:1: W293 blank line contains whitespace\x1b[0m\n'}
+[1.220723] (telekinesis) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:80:66: E201 whitespace after '('\x1b[0m\n"}
+[1.220812] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:88:1: W293 blank line contains whitespace\x1b[0m\n'}
+[1.220909] (telekinesis) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:90:9: E265 block comment should start with '# '\x1b[0m\n"}
+[1.221011] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:92:22: W291 trailing whitespace\x1b[0m\n'}
+[1.221109] (telekinesis) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:93:25: E231 missing whitespace after ','\x1b[0m\n"}
+[1.221211] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:94:100: E501 line too long (205 > 99 characters)\x1b[0m\n'}
+[1.221310] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:95:100: E501 line too long (101 > 99 characters)\x1b[0m\n'}
+[1.221412] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:96:49: W291 trailing whitespace\x1b[0m\n'}
+[1.221504] (telekinesis) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:99:9: E265 block comment should start with '# '\x1b[0m\n"}
+[1.221587] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:104:1: W293 blank line contains whitespace\x1b[0m\n'}
+[1.221667] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:106:27: W291 trailing whitespace\x1b[0m\n'}
+[1.221741] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:110:1: W293 blank line contains whitespace\x1b[0m\n'}
+[1.221817] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:113:1: W293 blank line contains whitespace\x1b[0m\n'}
+[1.221891] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:116:1: W293 blank line contains whitespace\x1b[0m\n'}
+[1.221966] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:119:1: W293 blank line contains whitespace\x1b[0m\n'}
+[1.222042] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:139:1: W293 blank line contains whitespace\x1b[0m\n'}
+[1.222115] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:140:100: E501 line too long (140 > 99 characters)\x1b[0m\n'}
+[1.222188] (telekinesis) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:158:9: E265 block comment should start with '# '\x1b[0m\n"}
+[1.222264] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:171:1: E302 expected 2 blank lines, found 1\x1b[0m\n'}
+[1.222339] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./telekinesis/ik_calc.py:181:1: E305 expected 2 blank lines after class or function definition, found 1\x1b[0m\n'}
+[1.222418] (telekinesis) StdoutLine: {'line': b'\x1b[1m\x1b[31mE   assert 1 == 0\x1b[0m\n'}
+[1.222490] (telekinesis) StdoutLine: {'line': b'----------------------------- Captured stdout call -----------------------------\n'}
+[1.222567] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.222644] (telekinesis) StdoutLine: {'line': b"./telekinesis/ik_calc.py:10:1: F401 'sys' imported but unused\n"}
+[1.222722] (telekinesis) StdoutLine: {'line': b'import sys\n'}
+[1.222797] (telekinesis) StdoutLine: {'line': b'^\n'}
+[1.222872] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.222948] (telekinesis) StdoutLine: {'line': b"./telekinesis/ik_calc.py:11:1: F401 'ament_index_python.packages.get_package_share_directory' imported but unused\n"}
+[1.223027] (telekinesis) StdoutLine: {'line': b'from ament_index_python.packages import get_package_share_directory\n'}
+[1.223104] (telekinesis) StdoutLine: {'line': b'^\n'}
+[1.223182] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.223259] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:15:100: E501 line too long (102 > 99 characters)\n'}
+[1.223337] (telekinesis) StdoutLine: {'line': b"'''\n"}
+[1.223415] (telekinesis) StdoutLine: {'line': b'This takes the glove data, and runs inverse kinematics and then publishes onto LEAP Hand.\n'}
+[1.223495] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.223579] (telekinesis) StdoutLine: {'line': b'Note how the fingertip positions are matching, but the joint angles between the two hands are not.  :) \n'}
+[1.223657] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.223749] (telekinesis) StdoutLine: {'line': b'Inspired by Dexcap https://dex-cap.github.io/ by Wang et. al. and Robotic Telekinesis by Shaw et. al.\n'}
+[1.223830] (telekinesis) StdoutLine: {'line': b"'''\n"}
+[1.223909] (telekinesis) StdoutLine: {'line': b'   \n'}
+[1.224014] (telekinesis) StdoutLine: {'line': b'                                                                                         \n'}
+[1.224100] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.224191] (telekinesis) StdoutLine: {'line': b'    ^\n'}
+[1.224270] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.224349] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:15:103: W291 trailing whitespace\n'}
+[1.224431] (telekinesis) StdoutLine: {'line': b"'''\n"}
+[1.224512] (telekinesis) StdoutLine: {'line': b'This takes the glove data, and runs inverse kinematics and then publishes onto LEAP Hand.\n'}
+[1.224596] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.224677] (telekinesis) StdoutLine: {'line': b'Note how the fingertip positions are matching, but the joint angles between the two hands are not.  :) \n'}
+[1.224761] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.224842] (telekinesis) StdoutLine: {'line': b'Inspired by Dexcap https://dex-cap.github.io/ by Wang et. al. and Robotic Telekinesis by Shaw et. al.\n'}
+[1.224921] (telekinesis) StdoutLine: {'line': b"'''\n"}
+[1.224998] (telekinesis) StdoutLine: {'line': b'   \n'}
+[1.225077] (telekinesis) StdoutLine: {'line': b'                                                                                         \n'}
+[1.225159] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.225239] (telekinesis) StdoutLine: {'line': b'       ^\n'}
+[1.225319] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.225398] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:17:100: E501 line too long (101 > 99 characters)\n'}
+[1.225481] (telekinesis) StdoutLine: {'line': b"'''\n"}
+[1.225560] (telekinesis) StdoutLine: {'line': b'This takes the glove data, and runs inverse kinematics and then publishes onto LEAP Hand.\n'}
+[1.225638] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.225715] (telekinesis) StdoutLine: {'line': b'Note how the fingertip positions are matching, but the joint angles between the two hands are not.  :) \n'}
+[1.225793] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.225873] (telekinesis) StdoutLine: {'line': b'Inspired by Dexcap https://dex-cap.github.io/ by Wang et. al. and Robotic Telekinesis by Shaw et. al.\n'}
+[1.225952] (telekinesis) StdoutLine: {'line': b"'''\n"}
+[1.226030] (telekinesis) StdoutLine: {'line': b'   \n'}
+[1.226110] (telekinesis) StdoutLine: {'line': b'                                                                                         \n'}
+[1.226189] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.226268] (telekinesis) StdoutLine: {'line': b'    ^\n'}
+[1.226346] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.226424] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:19:1: E302 expected 2 blank lines, found 0\n'}
+[1.226502] (telekinesis) StdoutLine: {'line': b'class PybulletIK(Node):\n'}
+[1.226576] (telekinesis) StdoutLine: {'line': b'^\n'}
+[1.226650] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.226724] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:21:35: W291 trailing whitespace\n'}
+[1.226816] (telekinesis) StdoutLine: {'line': b"        super().__init__('pyb_ik')  \n"}
+[1.226895] (telekinesis) StdoutLine: {'line': b'                                  ^\n'}
+[1.226974] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.227054] (telekinesis) StdoutLine: {'line': b"./telekinesis/ik_calc.py:23:9: E265 block comment should start with '# '\n"}
+[1.227134] (telekinesis) StdoutLine: {'line': b'        #clid = p.connect(p.SHARED_MEMORY)\n'}
+[1.227213] (telekinesis) StdoutLine: {'line': b'        ^\n'}
+[1.227289] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.227372] (telekinesis) StdoutLine: {'line': b"./telekinesis/ik_calc.py:24:9: E265 block comment should start with '# '\n"}
+[1.227449] (telekinesis) StdoutLine: {'line': b'        #clid = p.connect(p.DIRECT)\n'}
+[1.227526] (telekinesis) StdoutLine: {'line': b'        ^\n'}
+[1.227607] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.227682] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:26:31: W291 trailing whitespace\n'}
+[1.227761] (telekinesis) StdoutLine: {'line': b'        # load right leap hand      \n'}
+[1.227839] (telekinesis) StdoutLine: {'line': b'                              ^\n'}
+[1.227920] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.228002] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:32:1: W293 blank line contains whitespace\n'}
+[1.228083] (telekinesis) StdoutLine: {'line': b'        \n'}
+[1.228177] (telekinesis) StdoutLine: {'line': b'^\n'}
+[1.228260] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.228342] (telekinesis) StdoutLine: {'line': b"./telekinesis/ik_calc.py:34:9: E265 block comment should start with '# '\n"}
+[1.228423] (telekinesis) StdoutLine: {'line': b'        ##You may have to set this path for your setup on ROS2\n'}
+[1.228505] (telekinesis) StdoutLine: {'line': b'        ^\n'}
+[1.228586] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.228667] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:39:25: E251 unexpected spaces around keyword / parameter equals\n'}
+[1.228750] (telekinesis) StdoutLine: {'line': b'            useFixedBase = True\n'}
+[1.228831] (telekinesis) StdoutLine: {'line': b'                        ^\n'}
+[1.228909] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.228989] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:39:27: E251 unexpected spaces around keyword / parameter equals\n'}
+[1.229069] (telekinesis) StdoutLine: {'line': b'            useFixedBase = True\n'}
+[1.229148] (telekinesis) StdoutLine: {'line': b'                          ^\n'}
+[1.229226] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.229304] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:41:1: W293 blank line contains whitespace\n'}
+[1.229384] (telekinesis) StdoutLine: {'line': b'               \n'}
+[1.229466] (telekinesis) StdoutLine: {'line': b'^\n'}
+[1.229546] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.229626] (telekinesis) StdoutLine: {'line': b"./telekinesis/ik_calc.py:42:9: E265 block comment should start with '# '\n"}
+[1.229707] (telekinesis) StdoutLine: {'line': b'        #this is leap hand specific and may require us to change\n'}
+[1.229789] (telekinesis) StdoutLine: {'line': b'        ^\n'}
+[1.229869] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.229947] (telekinesis) StdoutLine: {'line': b"./telekinesis/ik_calc.py:44:13: E265 block comment should start with '# '\n"}
+[1.230025] (telekinesis) StdoutLine: {'line': b'            #writing to /leaphand_node/cmd_allegro_left\n'}
+[1.230102] (telekinesis) StdoutLine: {'line': b'            ^\n'}
+[1.230179] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.230257] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:45:100: E501 line too long (100 > 99 characters)\n'}
+[1.230335] (telekinesis) StdoutLine: {'line': b"            self.pub_hand = self.create_publisher(JointState, '/leaphand_node/cmd_allegro_left', 10)\n"}
+[1.230413] (telekinesis) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[1.230493] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.230571] (telekinesis) StdoutLine: {'line': b"./telekinesis/ik_calc.py:46:13: E265 block comment should start with '# '\n"}
+[1.230652] (telekinesis) StdoutLine: {'line': b'            #reading from /glove/l_short\n'}
+[1.230733] (telekinesis) StdoutLine: {'line': b'            ^\n'}
+[1.230812] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.230889] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:47:100: E501 line too long (110 > 99 characters)\n'}
+[1.230966] (telekinesis) StdoutLine: {'line': b'            self.sub_skeleton = self.create_subscription(PoseArray, "/glove/l_short", self.get_glove_data, 10)\n'}
+[1.231056] (telekinesis) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[1.231133] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.231211] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:48:14: W291 trailing whitespace\n'}
+[1.231290] (telekinesis) StdoutLine: {'line': b'        else:  \n'}
+[1.231372] (telekinesis) StdoutLine: {'line': b'             ^\n'}
+[1.231450] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.231528] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:49:100: E501 line too long (101 > 99 characters)\n'}
+[1.231609] (telekinesis) StdoutLine: {'line': b"            self.pub_hand = self.create_publisher(JointState, '/leaphand_node/cmd_allegro_right', 10)\n"}
+[1.231691] (telekinesis) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[1.231771] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.231850] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:50:100: E501 line too long (110 > 99 characters)\n'}
+[1.231929] (telekinesis) StdoutLine: {'line': b'            self.sub_skeleton = self.create_subscription(PoseArray, "/glove/r_short", self.get_glove_data, 10)\n'}
+[1.232015] (telekinesis) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[1.232099] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.232196] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:51:8: E114 indentation is not a multiple of 4 (comment)\n'}
+[1.232280] (telekinesis) StdoutLine: {'line': b'       ##################\n'}
+[1.232362] (telekinesis) StdoutLine: {'line': b'       ^\n'}
+[1.232443] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.232523] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:58:1: W293 blank line contains whitespace\n'}
+[1.232605] (telekinesis) StdoutLine: {'line': b'            \n'}
+[1.232686] (telekinesis) StdoutLine: {'line': b'^\n'}
+[1.232767] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.232847] (telekinesis) StdoutLine: {'line': b"./telekinesis/ik_calc.py:62:9: F841 local variable 'small_ball_shape' is assigned to but never used\n"}
+[1.232929] (telekinesis) StdoutLine: {'line': b'        small_ball_shape = p.createCollisionShape(p.GEOM_SPHERE, radius=small_ball_radius)\n'}
+[1.233012] (telekinesis) StdoutLine: {'line': b'        ^\n'}
+[1.233095] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.233176] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:67:1: W293 blank line contains whitespace\n'}
+[1.233259] (telekinesis) StdoutLine: {'line': b'        \n'}
+[1.233338] (telekinesis) StdoutLine: {'line': b'^\n'}
+[1.233415] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.233493] (telekinesis) StdoutLine: {'line': b"./telekinesis/ik_calc.py:69:25: E231 missing whitespace after ','\n"}
+[1.233570] (telekinesis) StdoutLine: {'line': b'        for i in range(0,4):\n'}
+[1.233649] (telekinesis) StdoutLine: {'line': b'                        ^\n'}
+[1.233727] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.233805] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:70:100: E501 line too long (165 > 99 characters)\n'}
+[1.233885] (telekinesis) StdoutLine: {'line': b'            self.ballMbt.append(p.createMultiBody(baseMass=baseMass, baseCollisionShapeIndex=ball_shape, basePosition=basePosition)) # for base and finger tip joints    \n'}
+[1.233966] (telekinesis) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[1.234045] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.234123] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:70:133: E261 at least two spaces before inline comment\n'}
+[1.234202] (telekinesis) StdoutLine: {'line': b'            self.ballMbt.append(p.createMultiBody(baseMass=baseMass, baseCollisionShapeIndex=ball_shape, basePosition=basePosition)) # for base and finger tip joints    \n'}
+[1.234281] (telekinesis) StdoutLine: {'line': b'                                                                                                                                    ^\n'}
+[1.234370] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.234451] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:70:166: W291 trailing whitespace\n'}
+[1.234542] (telekinesis) StdoutLine: {'line': b'            self.ballMbt.append(p.createMultiBody(baseMass=baseMass, baseCollisionShapeIndex=ball_shape, basePosition=basePosition)) # for base and finger tip joints    \n'}
+[1.234624] (telekinesis) StdoutLine: {'line': b'                                                                                                                                                                     ^\n'}
+[1.234712] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.234798] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:73:100: E501 line too long (101 > 99 characters)\n'}
+[1.234885] (telekinesis) StdoutLine: {'line': b'            p.setCollisionFilterGroupMask(self.ballMbt[i], -1, no_collision_group, no_collision_mask)\n'}
+[1.234970] (telekinesis) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[1.235056] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.235143] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:74:73: W291 trailing whitespace\n'}
+[1.235229] (telekinesis) StdoutLine: {'line': b'        p.changeVisualShape(self.ballMbt[0], -1, rgbaColor=[1, 0, 0, 1]) \n'}
+[1.235316] (telekinesis) StdoutLine: {'line': b'                                                                        ^\n'}
+[1.235402] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.235487] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:75:73: W291 trailing whitespace\n'}
+[1.235573] (telekinesis) StdoutLine: {'line': b'        p.changeVisualShape(self.ballMbt[1], -1, rgbaColor=[0, 1, 0, 1]) \n'}
+[1.235653] (telekinesis) StdoutLine: {'line': b'                                                                        ^\n'}
+[1.235732] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.235814] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:76:73: W291 trailing whitespace\n'}
+[1.235901] (telekinesis) StdoutLine: {'line': b'        p.changeVisualShape(self.ballMbt[2], -1, rgbaColor=[0, 0, 1, 1])  \n'}
+[1.235993] (telekinesis) StdoutLine: {'line': b'                                                                        ^\n'}
+[1.236081] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.236179] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:78:1: W293 blank line contains whitespace\n'}
+[1.236264] (telekinesis) StdoutLine: {'line': b'        \n'}
+[1.236345] (telekinesis) StdoutLine: {'line': b'^\n'}
+[1.236427] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.236509] (telekinesis) StdoutLine: {'line': b"./telekinesis/ik_calc.py:80:66: E201 whitespace after '('\n"}
+[1.236592] (telekinesis) StdoutLine: {'line': b'        _, current_orientation = p.getBasePositionAndOrientation( self.ballMbt[0])\n'}
+[1.236675] (telekinesis) StdoutLine: {'line': b'                                                                 ^\n'}
+[1.236762] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.236844] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:88:1: W293 blank line contains whitespace\n'}
+[1.236921] (telekinesis) StdoutLine: {'line': b'        \n'}
+[1.236999] (telekinesis) StdoutLine: {'line': b'^\n'}
+[1.237076] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.237154] (telekinesis) StdoutLine: {'line': b"./telekinesis/ik_calc.py:90:9: E265 block comment should start with '# '\n"}
+[1.237233] (telekinesis) StdoutLine: {'line': b'        #gets the data converts it and then computes IK and visualizes\n'}
+[1.237315] (telekinesis) StdoutLine: {'line': b'        ^\n'}
+[1.237396] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.237474] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:92:22: W291 trailing whitespace\n'}
+[1.237554] (telekinesis) StdoutLine: {'line': b'        hand_pos = []  \n'}
+[1.237641] (telekinesis) StdoutLine: {'line': b'                     ^\n'}
+[1.237722] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.237804] (telekinesis) StdoutLine: {'line': b"./telekinesis/ik_calc.py:93:25: E231 missing whitespace after ','\n"}
+[1.237888] (telekinesis) StdoutLine: {'line': b'        for i in range(0,10):\n'}
+[1.237971] (telekinesis) StdoutLine: {'line': b'                        ^\n'}
+[1.238054] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.238138] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:94:100: E501 line too long (205 > 99 characters)\n'}
+[1.238222] (telekinesis) StdoutLine: {'line': b'            hand_pos.append([poses[i].position.x * self.glove_to_leap_mapping_scale * 1.15, poses[i].position.y * self.glove_to_leap_mapping_scale, -poses[i].position.z * self.glove_to_leap_mapping_scale])\n'}
+[1.238309] (telekinesis) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[1.238394] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.238477] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:95:100: E501 line too long (101 > 99 characters)\n'}
+[1.238558] (telekinesis) StdoutLine: {'line': b"        # hand_pos[2][0] = hand_pos[2][0] - 0.02  this isn't great because they won't oppose properly\n"}
+[1.238639] (telekinesis) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[1.238720] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.238798] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:96:49: W291 trailing whitespace\n'}
+[1.238878] (telekinesis) StdoutLine: {'line': b'        # hand_pos[3][0] = hand_pos[3][0] - 0.02    \n'}
+[1.238960] (telekinesis) StdoutLine: {'line': b'                                                ^\n'}
+[1.239041] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.239124] (telekinesis) StdoutLine: {'line': b"./telekinesis/ik_calc.py:99:9: E265 block comment should start with '# '\n"}
+[1.239207] (telekinesis) StdoutLine: {'line': b'        #hand_pos[2][1] = hand_pos[2][1] + 0.002\n'}
+[1.239289] (telekinesis) StdoutLine: {'line': b'        ^\n'}
+[1.239372] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.239452] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:104:1: W293 blank line contains whitespace\n'}
+[1.239530] (telekinesis) StdoutLine: {'line': b'        \n'}
+[1.239609] (telekinesis) StdoutLine: {'line': b'^\n'}
+[1.239689] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.239768] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:106:27: W291 trailing whitespace\n'}
+[1.239849] (telekinesis) StdoutLine: {'line': b'        p.stepSimulation()     \n'}
+[1.239931] (telekinesis) StdoutLine: {'line': b'                          ^\n'}
+[1.240010] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.240092] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:110:1: W293 blank line contains whitespace\n'}
+[1.240187] (telekinesis) StdoutLine: {'line': b'        \n'}
+[1.240267] (telekinesis) StdoutLine: {'line': b'^\n'}
+[1.240345] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.240424] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:113:1: W293 blank line contains whitespace\n'}
+[1.240506] (telekinesis) StdoutLine: {'line': b'        \n'}
+[1.240587] (telekinesis) StdoutLine: {'line': b'^\n'}
+[1.240667] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.240745] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:116:1: W293 blank line contains whitespace\n'}
+[1.240824] (telekinesis) StdoutLine: {'line': b'        \n'}
+[1.240901] (telekinesis) StdoutLine: {'line': b'^\n'}
+[1.240977] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.241055] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:119:1: W293 blank line contains whitespace\n'}
+[1.241134] (telekinesis) StdoutLine: {'line': b'        \n'}
+[1.241211] (telekinesis) StdoutLine: {'line': b'^\n'}
+[1.241287] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.241363] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:139:1: W293 blank line contains whitespace\n'}
+[1.241449] (telekinesis) StdoutLine: {'line': b'        \n'}
+[1.241524] (telekinesis) StdoutLine: {'line': b'^\n'}
+[1.241615] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.241692] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:140:100: E501 line too long (140 > 99 characters)\n'}
+[1.241770] (telekinesis) StdoutLine: {'line': b'        combined_jointPoses = (jointPoses[0:4] + (0.0,) + jointPoses[4:8] + (0.0,) + jointPoses[8:12] + (0.0,) + jointPoses[12:16] + (0.0,))\n'}
+[1.241849] (telekinesis) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[1.241927] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.242003] (telekinesis) StdoutLine: {'line': b"./telekinesis/ik_calc.py:158:9: E265 block comment should start with '# '\n"}
+[1.242080] (telekinesis) StdoutLine: {'line': b'        #real_left_robot_hand_q = np.array([0.0 for _ in range(16)])\n'}
+[1.242159] (telekinesis) StdoutLine: {'line': b'        ^\n'}
+[1.242237] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.242312] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:171:1: E302 expected 2 blank lines, found 1\n'}
+[1.242402] (telekinesis) StdoutLine: {'line': b'def main(args=None):\n'}
+[1.242480] (telekinesis) StdoutLine: {'line': b'^\n'}
+[1.242557] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.242633] (telekinesis) StdoutLine: {'line': b'./telekinesis/ik_calc.py:181:1: E305 expected 2 blank lines after class or function definition, found 1\n'}
+[1.242712] (telekinesis) StdoutLine: {'line': b'if __name__ == "__main__":\n'}
+[1.242789] (telekinesis) StdoutLine: {'line': b'^\n'}
+[1.242866] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.242942] (telekinesis) StdoutLine: {'line': b'1     E114 indentation is not a multiple of 4 (comment)\n'}
+[1.243019] (telekinesis) StdoutLine: {'line': b"1     E201 whitespace after '('\n"}
+[1.243093] (telekinesis) StdoutLine: {'line': b"2     E231 missing whitespace after ','\n"}
+[1.243168] (telekinesis) StdoutLine: {'line': b'2     E251 unexpected spaces around keyword / parameter equals\n'}
+[1.243244] (telekinesis) StdoutLine: {'line': b'1     E261 at least two spaces before inline comment\n'}
+[1.243318] (telekinesis) StdoutLine: {'line': b"9     E265 block comment should start with '# '\n"}
+[1.243392] (telekinesis) StdoutLine: {'line': b'2     E302 expected 2 blank lines, found 0\n'}
+[1.243468] (telekinesis) StdoutLine: {'line': b'1     E305 expected 2 blank lines after class or function definition, found 1\n'}
+[1.243548] (telekinesis) StdoutLine: {'line': b'11    E501 line too long (102 > 99 characters)\n'}
+[1.243628] (telekinesis) StdoutLine: {'line': b"2     F401 'sys' imported but unused\n"}
+[1.243706] (telekinesis) StdoutLine: {'line': b"1     F841 local variable 'small_ball_shape' is assigned to but never used\n"}
+[1.243788] (telekinesis) StdoutLine: {'line': b'11    W291 trailing whitespace\n'}
+[1.243874] (telekinesis) StdoutLine: {'line': b'12    W293 blank line contains whitespace\n'}
+[1.243955] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.244036] (telekinesis) StdoutLine: {'line': b'6 files checked\n'}
+[1.244116] (telekinesis) StdoutLine: {'line': b'56 errors\n'}
+[1.244208] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.244286] (telekinesis) StdoutLine: {'line': b"'E'-type errors: 30\n"}
+[1.244365] (telekinesis) StdoutLine: {'line': b"'F'-type errors: 3\n"}
+[1.244447] (telekinesis) StdoutLine: {'line': b"'W'-type errors: 23\n"}
+[1.244529] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.244611] (telekinesis) StdoutLine: {'line': b'Checked files:\n'}
+[1.244695] (telekinesis) StdoutLine: {'line': b'\n'}
+[1.244775] (telekinesis) StdoutLine: {'line': b'* ./setup.py\n'}
+[1.244858] (telekinesis) StdoutLine: {'line': b'* ./telekinesis/ik_calc.py\n'}
+[1.244941] (telekinesis) StdoutLine: {'line': b'* ./telekinesis/__init__.py\n'}
+[1.245024] (telekinesis) StdoutLine: {'line': b'* ./test/test_pep257.py\n'}
+[1.245107] (telekinesis) StdoutLine: {'line': b'* ./test/test_copyright.py\n'}
+[1.245188] (telekinesis) StdoutLine: {'line': b'* ./test/test_flake8.py\n'}
+[1.245279] (telekinesis) StdoutLine: {'line': b'----------------------------- Captured stderr call -----------------------------\n'}
+[1.245365] (telekinesis) StdoutLine: {'line': b'option --max-complexity: please update from optparse string `type=` to argparse callable `type=` -- this will be an error in the future\n'}
+[1.245453] (telekinesis) StdoutLine: {'line': b'--- generated xml file: /home/justin/glove_ROS/build/telekinesis/pytest.xml ----\n'}
+[1.245540] (telekinesis) StderrLine: {'line': b'\x1b[33m=============================== warnings summary ===============================\x1b[0m\n'}
+[1.245639] (telekinesis) StderrLine: {'line': b'test/test_flake8.py::test_flake8\n'}
+[1.245723] (telekinesis) StderrLine: {'line': b'test/test_flake8.py::test_flake8\n'}
+[1.245804] (telekinesis) StderrLine: {'line': b'  Warning: SelectableGroups dict interface is deprecated. Use select.\n'}
+[1.245885] (telekinesis) StderrLine: {'line': b'\n'}
+[1.245966] (telekinesis) StderrLine: {'line': b'-- Docs: https://docs.pytest.org/en/stable/warnings.html\n'}
+[1.246049] (telekinesis) StdoutLine: {'line': b'=========================== short test summary info ============================\n'}
+[1.246135] (telekinesis) StdoutLine: {'line': b'FAILED test/test_flake8.py::test_flake8 - AssertionError: Found 56 code style...\n'}
+[1.246219] (telekinesis) StdoutLine: {'line': b'\x1b[31m============== \x1b[31m\x1b[1m1 failed\x1b[0m, \x1b[32m1 passed\x1b[0m, \x1b[33m1 skipped\x1b[0m, \x1b[33m2 warnings\x1b[0m\x1b[31m in 0.25s\x1b[0m\x1b[31m ==============\x1b[0m\n'}
+[1.287411] (telekinesis) CommandEnded: {'returncode': 1}
+[1.287900] (telekinesis) TestFailure: {'identifier': 'telekinesis'}
+[1.287948] (telekinesis) JobEnded: {'identifier': 'telekinesis', 'rc': 0}
+[1.288689] (-) EventReactorShutdown: {}
