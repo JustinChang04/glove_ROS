@@ -1,7 +1,0 @@
-[0.464s] Invoking command in '/home/justin/glove_ROS/src/launch_main': AMENT_PREFIX_PATH=/home/justin/glove_ROS/install/launch_main:/home/justin/glove_ROS/install/telekinesis:/home/justin/glove_ROS/install/glove:/opt/ros/humble PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/justin/glove_ROS/install/launch_main/lib/python3.10/site-packages:/home/justin/glove_ROS/install/telekinesis/lib/python3.10/site-packages:/home/justin/glove_ROS/install/glove/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/python3 -m unittest -v
-[0.496s] 
-[0.496s] ----------------------------------------------------------------------
-[0.496s] Ran 0 tests in 0.000s
-[0.496s] 
-[0.497s] OK
-[0.700s] Invoked command in '/home/justin/glove_ROS/src/launch_main' returned '0': AMENT_PREFIX_PATH=/home/justin/glove_ROS/install/launch_main:/home/justin/glove_ROS/install/telekinesis:/home/justin/glove_ROS/install/glove:/opt/ros/humble PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/justin/glove_ROS/install/launch_main/lib/python3.10/site-packages:/home/justin/glove_ROS/install/telekinesis/lib/python3.10/site-packages:/home/justin/glove_ROS/install/glove/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/python3 -m unittest -v
