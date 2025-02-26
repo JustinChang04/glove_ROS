@@ -13,5 +13,5 @@ colcon build
 
 To run leap_v1_ik.py, from the workspace folder, cd into src/launch, and run
 ```bash
-ros2 launch leap_v1_ik.py
+ros2 launch ik_launch.py
 ```
