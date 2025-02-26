@@ -15,7 +15,7 @@ The full skeleton is the xyz quaternion of every single
 
 IP_ADDRESS = "tcp://localhost:8000"
 LEFT_GLOVE_SN =  "45a7fc8f"
-RIGHT_GLOVE_SN = "8569617b"
+RIGHT_GLOVE_SN = "bccdf6ef"
 
 class GloveReader(Node):
     def __init__(self):

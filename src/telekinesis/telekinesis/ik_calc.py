@@ -23,14 +23,14 @@ class PybulletIK(Node):
         #clid = p.connect(p.SHARED_MEMORY)
         #clid = p.connect(p.DIRECT)
         p.connect(p.GUI)
-        # load right leap hand      
-        path_src = os.path.abspath(__file__)
-        path_src = os.path.dirname(path_src)
+        # load right leap hand
+        
         self.is_left = self.declare_parameter('isLeft', False).get_parameter_value().bool_value
         self.glove_to_leap_mapping_scale = 1.6
         self.leapEndEffectorIndex = [3, 4, 8, 9, 13, 14, 18, 19]
         
-        path_src = os.path.join(path_src, "ros2/telekinesis/robot_hand/robot.urdf")
+        path_src = os.path.join(os.path.expanduser("~"), "glove_ROS/src/telekinesis/robot_hand/robot_pybullet.urdf")
+        print(f"Path src = {path_src}")
         ##You may have to set this path for your setup on ROS2
         self.LeapId = p.loadURDF(
             path_src,

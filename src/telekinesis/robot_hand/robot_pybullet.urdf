@@ -1,4 +1,3 @@
-<!-- Change the path of the meshes -->
 <?xml version="1.0" encoding="utf-8"?>
 <!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
@@ -42,7 +41,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://telekinesis/robot_hand/assets/base_link.STL" />
+          filename="base_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -79,7 +78,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://telekinesis/robot_hand/assets/Thumb_CMC.STL" />
+          filename="Thumb_CMC.STL" />
       </geometry>
       <material
         name="">
@@ -93,7 +92,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://telekinesis/robot_hand/assets/Thumb_CMC.STL" />
+          filename="Thumb_CMC.STL" />
       </geometry>
     </collision>
   </link>
@@ -137,7 +136,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://telekinesis/robot_hand/assets/Thumb_MCP.STL" />
+          filename="Thumb_MCP.STL" />
       </geometry>
       <material
         name="">
@@ -151,7 +150,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://telekinesis/robot_hand/assets/Thumb_MCP.STL" />
+          filename="Thumb_MCP.STL" />
       </geometry>
     </collision>
   </link>
@@ -195,7 +194,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://telekinesis/robot_hand/assets/Thumb_IP.STL" />
+          filename="Thumb_IP.STL" />
       </geometry>
       <material
         name="">
@@ -209,7 +208,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://telekinesis/robot_hand/assets/Thumb_IP.STL" />
+          filename="Thumb_IP.STL" />
       </geometry>
     </collision>
   </link>
@@ -253,7 +252,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://telekinesis/robot_hand/assets/Index_Below_MCP.STL" />
+          filename="Index_Below_MCP.STL" />
       </geometry>
       <material
         name="">
@@ -267,7 +266,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://telekinesis/robot_hand/assets/Index_Below_MCP.STL" />
+          filename="Index_Below_MCP.STL" />
       </geometry>
     </collision>
   </link>
@@ -311,7 +310,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://telekinesis/robot_hand/assets/Index_MCP.STL" />
+          filename="Index_MCP.STL" />
       </geometry>
       <material
         name="">
@@ -325,7 +324,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://telekinesis/robot_hand/assets/Index_MCP.STL" />
+          filename="Index_MCP.STL" />
       </geometry>
     </collision>
   </link>
@@ -369,7 +368,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://telekinesis/robot_hand/assets/Index_PIP.STL" />
+          filename="Index_PIP.STL" />
       </geometry>
       <material
         name="">
@@ -383,7 +382,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://telekinesis/robot_hand/assets/Index_PIP.STL" />
+          filename="Index_PIP.STL" />
       </geometry>
     </collision>
   </link>
@@ -427,7 +426,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://telekinesis/robot_hand/assets/Index_PIP.STL" />
+          filename="Index_DIP.STL" />
       </geometry>
       <material
         name="">
@@ -441,7 +440,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://telekinesis/robot_hand/assets/Index_DIP.STL" />
+          filename="Index_DIP.STL" />
       </geometry>
     </collision>
   </link>
@@ -485,7 +484,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://telekinesis/robot_hand/assets/Middle_MCP.STL" />
+          filename="Middle_MCP.STL" />
       </geometry>
       <material
         name="">
@@ -499,7 +498,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://telekinesis/robot_hand/assets/Middle_MCP.STL" />
+          filename="Middle_MCP.STL" />
       </geometry>
     </collision>
   </link>
@@ -543,7 +542,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://telekinesis/robot_hand/assets/Middle_PIP.STL" />
+          filename="Middle_PIP.STL" />
       </geometry>
       <material
         name="">
@@ -557,7 +556,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://telekinesis/robot_hand/assets/Middle_PIP.STL" />
+          filename="Middle_PIP.STL" />
       </geometry>
     </collision>
   </link>
@@ -601,7 +600,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://telekinesis/robot_hand/assets/Middle_DIP.STL" />
+          filename="Middle_DIP.STL" />
       </geometry>
       <material
         name="">
@@ -615,7 +614,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://telekinesis/robot_hand/assets/Middle_DIP.STL" />
+          filename="Middle_DIP.STL" />
       </geometry>
     </collision>
   </link>
@@ -659,7 +658,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://telekinesis/robot_hand/assets/Ring_Below_MCP.STL" />
+          filename="Ring_Below_MCP.STL" />
       </geometry>
       <material
         name="">
@@ -673,7 +672,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://telekinesis/robot_hand/assets/Ring_Below_MCP.STL" />
+          filename="Ring_Below_MCP.STL" />
       </geometry>
     </collision>
   </link>
@@ -717,7 +716,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://telekinesis/robot_hand/assets/Ring_MCP.STL" />
+          filename="Ring_MCP.STL" />
       </geometry>
       <material
         name="">
@@ -731,7 +730,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://telekinesis/robot_hand/assets/Ring_MCP.STL" />
+          filename="Ring_MCP.STL" />
       </geometry>
     </collision>
   </link>
@@ -775,7 +774,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://telekinesis/robot_hand/assets/Ring_PIP.STL" />
+          filename="Ring_PIP.STL" />
       </geometry>
       <material
         name="">
@@ -789,7 +788,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://telekinesis/robot_hand/assets/Ring_PIP.STL" />
+          filename="Ring_PIP.STL" />
       </geometry>
     </collision>
   </link>
@@ -833,7 +832,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://telekinesis/robot_hand/assets/Ring_DIP.STL" />
+          filename="Ring_DIP.STL" />
       </geometry>
       <material
         name="">
@@ -847,7 +846,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://telekinesis/robot_hand/assets/Ring_DIP.STL" />
+          filename="Ring_DIP.STL" />
       </geometry>
     </collision>
   </link>
@@ -891,7 +890,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://telekinesis/robot_hand/assets/Pinky_Below_MCP.STL" />
+          filename="Pinky_Below_MCP.STL" />
       </geometry>
       <material
         name="">
@@ -905,7 +904,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://telekinesis/robot_hand/assets/Pinky_Below_MCP.STL" />
+          filename="Pinky_Below_MCP.STL" />
       </geometry>
     </collision>
   </link>
@@ -949,7 +948,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://telekinesis/robot_hand/assets/Pinky_MCP.STL" />
+          filename="Pinky_MCP.STL" />
       </geometry>
       <material
         name="">
@@ -963,7 +962,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://telekinesis/robot_hand/assets/Pinky_MCP.STL" />
+          filename="Pinky_MCP.STL" />
       </geometry>
     </collision>
   </link>
@@ -1007,7 +1006,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://telekinesis/robot_hand/assets/Pinky_PIP.STL" />
+          filename="Pinky_PIP.STL" />
       </geometry>
       <material
         name="">
@@ -1021,7 +1020,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://telekinesis/robot_hand/assets/Pinky_PIP.STL" />
+          filename="Pinky_PIP.STL" />
       </geometry>
     </collision>
   </link>
@@ -1065,7 +1064,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://telekinesis/robot_hand/assets/Pinky_DIP.STL" />
+          filename="Pinky_DIP.STL" />
       </geometry>
       <material
         name="">
@@ -1079,7 +1078,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://telekinesis/robot_hand/assets/Pinky_DIP.STL" />
+          filename="Pinky_DIP.STL" />
       </geometry>
     </collision>
   </link>
