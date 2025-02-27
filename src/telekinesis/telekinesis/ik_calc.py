@@ -27,9 +27,9 @@ class PybulletIK(Node):
         
         self.is_left = self.declare_parameter('isLeft', False).get_parameter_value().bool_value
         self.glove_to_leap_mapping_scale = 1.6
-        self.leapEndEffectorIndex = [3, 4, 8, 9, 13, 14, 18, 19]
+        self.leapEndEffectorIndex = [1, 3, 5, 7, 9]
         
-        path_src = os.path.join(os.path.expanduser("~"), "glove_ROS/src/telekinesis/robot_hand/robot_pybullet.urdf")
+        path_src = os.path.join(os.path.expanduser("~"), "glove_ROS/src/telekinesis/robot_hand/hand.urdf")
         print(f"Path src = {path_src}")
         ##You may have to set this path for your setup on ROS2
         self.LeapId = p.loadURDF(
@@ -51,13 +51,14 @@ class PybulletIK(Node):
        ##################
 
         self.numJoints = p.getNumJoints(self.LeapId)
+        print(f"Num joints: {self.numJoints}")
         p.setGravity(0, 0, 0)
         useRealTimeSimulation = 0
         p.setRealTimeSimulation(useRealTimeSimulation)
         self.create_target_vis()
             
     def create_target_vis(self):
-        # load balls
+        # Load balls
         small_ball_radius = 0.01
         small_ball_shape = p.createCollisionShape(p.GEOM_SPHERE, radius=small_ball_radius)
         ball_radius = 0.01
@@ -65,9 +66,10 @@ class PybulletIK(Node):
         baseMass = 0.001
         basePosition = [0.25, 0.25, 0]
         
+        # this array holds the information of the 5 balls which is accessed later
         self.ballMbt = []
-        for i in range(0,4):
-            self.ballMbt.append(p.createMultiBody(baseMass=baseMass, baseCollisionShapeIndex=ball_shape, basePosition=basePosition)) # for base and finger tip joints    
+        for i in range(0, 5):
+            self.ballMbt.append(p.createMultiBody(baseMass=baseMass, baseCollisionShapeIndex=ball_shape, basePosition=basePosition))  # for base and finger tip joints    
             no_collision_group = 0
             no_collision_mask = 0
             p.setCollisionFilterGroupMask(self.ballMbt[i], -1, no_collision_group, no_collision_mask)
@@ -75,47 +77,56 @@ class PybulletIK(Node):
         p.changeVisualShape(self.ballMbt[1], -1, rgbaColor=[0, 1, 0, 1]) 
         p.changeVisualShape(self.ballMbt[2], -1, rgbaColor=[0, 0, 1, 1])  
         p.changeVisualShape(self.ballMbt[3], -1, rgbaColor=[1, 1, 1, 1])
+        p.changeVisualShape(self.ballMbt[4], -1, rgbaColor=[1, 0, 1, 1])
         
     def update_target_vis(self, hand_pos):
-        _, current_orientation = p.getBasePositionAndOrientation( self.ballMbt[0])
-        p.resetBasePositionAndOrientation(self.ballMbt[0], hand_pos[3], current_orientation)
-        _, current_orientation = p.getBasePositionAndOrientation(self.ballMbt[1])
-        p.resetBasePositionAndOrientation(self.ballMbt[1], hand_pos[2], current_orientation)
-        _, current_orientation = p.getBasePositionAndOrientation(self.ballMbt[2])
-        p.resetBasePositionAndOrientation(self.ballMbt[2], hand_pos[7], current_orientation)
-        _, current_orientation = p.getBasePositionAndOrientation(self.ballMbt[3])
-        p.resetBasePositionAndOrientation(self.ballMbt[3], hand_pos[1], current_orientation)
+        for i, joint_idx in enumerate(self.leapEndEffectorIndex): # for every joint that is considered the end 
+            link_state = p.getLinkState(self.robotId, joint_idx) #this gets the specific joint information 
+            position = link_state[0]  # Get the world position of the fingertip joint (in the link_state)
+            p.resetBasePositionAndOrientation(self.ballMbt[i], position, [0, 0, 0, 1])  # sets the position of each of the balls 
         
     def get_glove_data(self, pose):
         #gets the data converts it and then computes IK and visualizes
         poses = pose.poses
+
+        print(f"Poses: {len(poses)}")
         hand_pos = []  
         for i in range(0,10):
-            hand_pos.append([poses[i].position.x * self.glove_to_leap_mapping_scale * 1.15, poses[i].position.y * self.glove_to_leap_mapping_scale, -poses[i].position.z * self.glove_to_leap_mapping_scale])
+            hand_pos.append([poses[i].position.x, poses[i].position.y, -poses[i].position.z])
         # hand_pos[2][0] = hand_pos[2][0] - 0.02  this isn't great because they won't oppose properly
         # hand_pos[3][0] = hand_pos[3][0] - 0.02    
         # hand_pos[6][0] = hand_pos[6][0] + 0.02
         # hand_pos[7][0] = hand_pos[7][0] + 0.02
         #hand_pos[2][1] = hand_pos[2][1] + 0.002
-        hand_pos[4][1] = hand_pos[4][1] + 0.002
-        hand_pos[6][1] = hand_pos[6][1] + 0.002
+        # hand_pos[4][1] = hand_pos[4][1] + 0.002
+        # hand_pos[6][1] = hand_pos[6][1] + 0.002
+
         self.compute_IK(hand_pos)
         self.update_target_vis(hand_pos)
         
     def compute_IK(self, hand_pos):
-        p.stepSimulation()     
+        p.stepSimulation()
 
-        rightHandIndex_middle_pos = hand_pos[2]
-        rightHandIndex_pos = hand_pos[3]
+        # Pinky: 0, 1
+        # Thumb: 2, 3
+        # Index: 4, 5
+        # Ring: 6, 7
+        # Middle: 8, 9   
+
+        rightHandPinky_middle_pos = hand_pos[0]
+        rightHandPinky_pos = hand_pos[1]
+
+        rightHandIndex_middle_pos = hand_pos[4]
+        rightHandIndex_pos = hand_pos[5]
         
-        rightHandMiddle_middle_pos = hand_pos[4]
-        rightHandMiddle_pos = hand_pos[5]
+        rightHandMiddle_middle_pos = hand_pos[8]
+        rightHandMiddle_pos = hand_pos[9]
         
         rightHandRing_middle_pos = hand_pos[6]
         rightHandRing_pos = hand_pos[7]
         
-        rightHandThumb_middle_pos = hand_pos[0]
-        rightHandThumb_pos = hand_pos[1]
+        rightHandThumb_middle_pos = hand_pos[2]
+        rightHandThumb_pos = hand_pos[3]
         
         leapEndEffectorPos = [
             rightHandIndex_middle_pos,
@@ -124,6 +135,8 @@ class PybulletIK(Node):
             rightHandMiddle_pos,
             rightHandRing_middle_pos,
             rightHandRing_pos,
+            rightHandPinky_middle_pos,
+            rightHandPinky_pos,
             rightHandThumb_middle_pos,
             rightHandThumb_pos
         ]
