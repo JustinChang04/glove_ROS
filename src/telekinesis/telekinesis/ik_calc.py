@@ -27,7 +27,7 @@ class PybulletIK(Node):
         
         self.is_left = self.declare_parameter('isLeft', False).get_parameter_value().bool_value
         self.glove_to_leap_mapping_scale = 1.6
-        self.leapEndEffectorIndex = [2, 3, 7, 8, 11, 12, 16, 17, 21, 22]
+        self.leapEndEffectorIndex = [21, 22, 2, 3, 7, 8, 16, 17, 11, 12]
         
         path_src = os.path.join(os.path.expanduser("~"), "glove_ROS/src/telekinesis/robot_hand/hand.urdf")
         ##You may have to set this path for your setup on ROS2
@@ -87,7 +87,7 @@ class PybulletIK(Node):
         _, current_orientation = p.getBasePositionAndOrientation(self.ballMbt[3])
         p.resetBasePositionAndOrientation(self.ballMbt[3], hand_pos[7], current_orientation)
         _, current_orientation = p.getBasePositionAndOrientation(self.ballMbt[4])
-        p.resetBasePositionAndOrientation(self.ballMbt[3], hand_pos[3], current_orientation)
+        p.resetBasePositionAndOrientation(self.ballMbt[4], hand_pos[3], current_orientation)
 
     def get_glove_data(self, pose):
         #gets the data converts it and then computes IK and visualizes
@@ -95,7 +95,8 @@ class PybulletIK(Node):
 
         hand_pos = []  
         for i in range(0,10):
-            hand_pos.append([poses[i].position.x, poses[i].position.y, -poses[i].position.z])
+            # hand_pos.append([-poses[i].position.y, -poses[i].position.x, poses[i].position.z])
+            hand_pos.append([-poses[i].position.y, -poses[i].position.x, poses[i].position.z])
         # hand_pos[2][0] = hand_pos[2][0] - 0.02  this isn't great because they won't oppose properly
         # hand_pos[3][0] = hand_pos[3][0] - 0.02    
         # hand_pos[6][0] = hand_pos[6][0] + 0.02
@@ -132,16 +133,16 @@ class PybulletIK(Node):
         rightHandThumb_pos = hand_pos[3]
         
         leapEndEffectorPos = [
+            rightHandPinky_middle_pos,
+            rightHandPinky_pos,
             rightHandThumb_middle_pos,
             rightHandThumb_pos,
             rightHandIndex_middle_pos,
             rightHandIndex_pos,
-            rightHandMiddle_middle_pos,
-            rightHandMiddle_pos,
             rightHandRing_middle_pos,
             rightHandRing_pos,
-            rightHandPinky_middle_pos,
-            rightHandPinky_pos
+            rightHandMiddle_middle_pos,
+            rightHandMiddle_pos
         ]
 
         jointPoses = p.calculateInverseKinematics2(
@@ -152,12 +153,16 @@ class PybulletIK(Node):
             maxNumIterations=50,
             residualThreshold=0.0001,
         )
-        
-        combined_jointPoses = (jointPoses[0:4] + (0.0,) + jointPoses[4:8] + (0.0,) + jointPoses[8:12] + (0.0,) + jointPoses[12:16] + (0.0,))
+        # Right now: Index, Middle, ring, Pinky, Thumb
+        # 0:4, 4:8, 8:12, 12:16, 16:19
+        # combined_jointPoses = (jointPoses[0:4] + (0.0,) + jointPoses[4:7] + (0.0,) + jointPoses[7:11] + (0.0,) + jointPoses[11:15] + (0.0,) + jointPoses[15:19] + (0.0,))
+        #combined_jointPoses = (jointPoses[0:4] + (0.0,) + jointPoses[4:7] + (0.0,) + jointPoses[7:11] + (0.0,) + jointPoses[11:15] + (0.0,) + jointPoses[15:19] + (0.0,))
+        combined_jointPoses = (jointPoses[0:3] + (0.0,) + jointPoses[3:7] + (0.0,) + jointPoses[7:11] + (0.0,) + jointPoses[11:15] + (0.0,) + jointPoses[15:19] + (0.0,))
+
         combined_jointPoses = list(combined_jointPoses)
 
         # update the hand joints
-        for i in range(20):
+        for i in range(23):
             p.setJointMotorControl2(
                 bodyIndex=self.LeapId,
                 jointIndex=i,
@@ -177,6 +182,7 @@ class PybulletIK(Node):
         real_robot_hand_q[4:8] = jointPoses[4:8]
         real_robot_hand_q[8:12] = jointPoses[8:12]
         real_robot_hand_q[12:16] = jointPoses[12:16]
+
         real_robot_hand_q[0:2] = real_robot_hand_q[0:2][::-1]
         real_robot_hand_q[4:6] = real_robot_hand_q[4:6][::-1]
         real_robot_hand_q[8:10] = real_robot_hand_q[8:10][::-1]
