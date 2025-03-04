@@ -1,6 +1,6 @@
-install
-build
-log
-src/log
-src/build
-src/install
+install/
+build/
+log/
+src/log/
+src/build/
+src/install/
