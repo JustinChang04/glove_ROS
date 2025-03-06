@@ -3,12 +3,12 @@ import pybullet as p
 import numpy as np
 import rclpy
 import os
+import serial
+import struct
+import time
 
 from rclpy.node import Node
 from geometry_msgs.msg import PoseArray
-from sensor_msgs.msg import JointState
-import sys
-from ament_index_python.packages import get_package_share_directory
 '''
 This takes the glove data, and runs inverse kinematics and then publishes onto LEAP Hand.
 
@@ -41,11 +41,11 @@ class PybulletIK(Node):
         #this is leap hand specific and may require us to change
         if self.is_left:
             #writing to /leaphand_node/cmd_allegro_left
-            self.pub_hand = self.create_publisher(JointState, '/leaphand_node/cmd_allegro_left', 10)
+            # self.pub_hand = self.create_publisher(JointState, '/leaphand_node/cmd_allegro_left', 10)
             #reading from /glove/l_short
             self.sub_skeleton = self.create_subscription(PoseArray, "/glove/l_short", self.get_glove_data, 10)
         else:  
-            self.pub_hand = self.create_publisher(JointState, '/leaphand_node/cmd_allegro_right', 10)
+            self.ser = serial.Serial('dev/ttyUSB0', 115200, timeout=1)
             self.sub_skeleton = self.create_subscription(PoseArray, "/glove/r_short", self.get_glove_data, 10)
        ##################
 
@@ -99,7 +99,7 @@ class PybulletIK(Node):
             hand_pos.append([-poses[i].position.y, -poses[i].position.x, poses[i].position.z])
         hand_pos[1][2] = hand_pos[1][2] - 0.06  
         hand_pos[1][1] = hand_pos[1][1] + 0.01    
-        # hand_pos[6][0] = hand_pos[6][0] + 0.02
+        hand_pos[9][2] = hand_pos[9][2] + 0.04
         # hand_pos[7][0] = hand_pos[7][0] + 0.02
         #hand_pos[2][1] = hand_pos[2][1] + 0.002
         # hand_pos[4][1] = hand_pos[4][1] + 0.002
@@ -153,7 +153,7 @@ class PybulletIK(Node):
             maxNumIterations=50,
             residualThreshold=0.0001,
         )
-        # Right now: Index, Middle, ring, Pinky, Thumb
+        # Right now: Thumb, Index, Middle, Ring, Pinky
         # 0:4, 4:8, 8:12, 12:16, 16:19
         # combined_jointPoses = (jointPoses[0:4] + (0.0,) + jointPoses[4:7] + (0.0,) + jointPoses[7:11] + (0.0,) + jointPoses[11:15] + (0.0,) + jointPoses[15:19] + (0.0,))
       #  combined_jointPoses = (jointPoses[0:4] + (0.0,) + jointPoses[4:8] + (0.0,) + jointPoses[8:12] + (0.0,) + jointPoses[12:16] + (0.0,) + jointPoses[16:19] + (0.0,))
@@ -162,7 +162,7 @@ class PybulletIK(Node):
         combined_jointPoses = list(combined_jointPoses)
 
         # update the hand joints
-        for i in range(24):
+        for i in range(23):
             p.setJointMotorControl2(
                 bodyIndex=self.LeapId,
                 jointIndex=i,
@@ -177,20 +177,15 @@ class PybulletIK(Node):
 
 
         # map results to real robot
-        real_robot_hand_q = np.array([float(0.0) for _ in range(16)])
-        #real_left_robot_hand_q = np.array([0.0 for _ in range(16)])
+        real_robot_hand_q = np.array(jointPoses).astype(np.float32)
 
-        real_robot_hand_q[0:4] = jointPoses[0:4]
-        real_robot_hand_q[4:8] = jointPoses[4:8]
-        real_robot_hand_q[8:12] = jointPoses[8:12]
-        real_robot_hand_q[12:16] = jointPoses[12:16]
-
-        real_robot_hand_q[0:2] = real_robot_hand_q[0:2][::-1]
-        real_robot_hand_q[4:6] = real_robot_hand_q[4:6][::-1]
-        real_robot_hand_q[8:10] = real_robot_hand_q[8:10][::-1]
-        stater = JointState()
-        stater.position = [float(i) for i in real_robot_hand_q]
-        self.pub_hand.publish(stater)
+        # real_robot_hand_q[0:2] = real_robot_hand_q[0:2][::-1]
+        # real_robot_hand_q[4:6] = real_robot_hand_q[4:6][::-1]
+        # real_robot_hand_q[8:10] = real_robot_hand_q[8:10][::-1]
+        
+        packed_data = struct.pack("B19f", 0xAA, *real_robot_hand_q)
+        self.ser.write(packed_data)
+        time.sleep(0.001)
 
 def main(args=None):
     rclpy.init(args=args)
