@@ -8,6 +8,7 @@ import struct
 import time
 
 from rclpy.node import Node
+from sensor_msgs.msg import JointState
 from geometry_msgs.msg import PoseArray
 '''
 This takes the glove data, and runs inverse kinematics and then publishes onto LEAP Hand.
@@ -26,7 +27,6 @@ class PybulletIK(Node):
         # load right leap hand
         
         self.is_left = self.declare_parameter('isLeft', False).get_parameter_value().bool_value
-        self.glove_to_leap_mapping_scale = 1.6
         self.leapEndEffectorIndex = [2, 3, 7, 8, 11, 12, 16, 17, 21, 22]
         
         path_src = os.path.join(os.path.expanduser("~"), "glove_ROS/src/telekinesis/robot_hand/hand.urdf")
@@ -41,11 +41,11 @@ class PybulletIK(Node):
         #this is leap hand specific and may require us to change
         if self.is_left:
             #writing to /leaphand_node/cmd_allegro_left
-            # self.pub_hand = self.create_publisher(JointState, '/leaphand_node/cmd_allegro_left', 10)
+            self.pub_hand = self.create_publisher(JointState, "/left_hand", 10)
             #reading from /glove/l_short
             self.sub_skeleton = self.create_subscription(PoseArray, "/glove/l_short", self.get_glove_data, 10)
         else:  
-            self.ser = serial.Serial('dev/ttyUSB0', 115200, timeout=1)
+            self.pub_hand = self.create_publisher(JointState, "/right_hand", 10)
             self.sub_skeleton = self.create_subscription(PoseArray, "/glove/r_short", self.get_glove_data, 10)
        ##################
 
@@ -155,9 +155,9 @@ class PybulletIK(Node):
         )
         # Right now: Thumb, Index, Middle, Ring, Pinky
         # 0:4, 4:8, 8:12, 12:16, 16:19
-        # combined_jointPoses = (jointPoses[0:4] + (0.0,) + jointPoses[4:7] + (0.0,) + jointPoses[7:11] + (0.0,) + jointPoses[11:15] + (0.0,) + jointPoses[15:19] + (0.0,))
-      #  combined_jointPoses = (jointPoses[0:4] + (0.0,) + jointPoses[4:8] + (0.0,) + jointPoses[8:12] + (0.0,) + jointPoses[12:16] + (0.0,) + jointPoses[16:19] + (0.0,))
-        combined_jointPoses = (jointPoses[0:3] + (0.0,) + jointPoses[3:7] + (0.0,) + jointPoses[7:11] + (0.0,) + jointPoses[11:15] + (0.0,) + jointPoses[15:19] + (0.0,))
+        # combined_jointPoses = (jointPoses[0:3] + (0.0,) + jointPoses[3:7] + (0.0,) + jointPoses[7:11] + (0.0,) + jointPoses[11:15] + (0.0,) + jointPoses[15:19] + (0.0,))
+        combined_jointPoses = (jointPoses[0:3] + (0.0,) + jointPoses[3:7] + (0.0,) + jointPoses[7:10] + (0.0,) + jointPoses[10:14] + (0.0,) + jointPoses[14:18] + (0.0,))
+
 
         combined_jointPoses = list(combined_jointPoses)
 
@@ -173,8 +173,6 @@ class PybulletIK(Node):
                 positionGain=0.3,
                 velocityGain=1,
             )
-        
-
 
         # map results to real robot
         real_robot_hand_q = np.array(jointPoses).astype(np.float32)
@@ -183,9 +181,10 @@ class PybulletIK(Node):
         # real_robot_hand_q[4:6] = real_robot_hand_q[4:6][::-1]
         # real_robot_hand_q[8:10] = real_robot_hand_q[8:10][::-1]
         
-        packed_data = struct.pack("B19f", 0xAA, *real_robot_hand_q)
-        self.ser.write(packed_data)
-        time.sleep(0.001)
+        state = JointState()
+        state.position = [float(i) for i in real_robot_hand_q]
+        self.pub_hand.publish(state)
+        time.sleep(0.01)
 
 def main(args=None):
     rclpy.init(args=args)
