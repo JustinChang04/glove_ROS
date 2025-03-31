@@ -27,10 +27,17 @@ class PybulletIK(Node):
         # load right leap hand
         
         self.is_left = self.declare_parameter('isLeft', False).get_parameter_value().bool_value
+       
+        '''
+        The end effector indexes refers to the finger tips and DIP 
+        These are specific array positions in the URDF loaded through pybullet
+        '''
         self.leapEndEffectorIndex = [2, 3, 7, 8, 11, 12, 16, 17, 21, 22]
         
         path_src = os.path.join(os.path.expanduser("~"), "glove_ROS/src/telekinesis/robot_hand/hand.urdf")
-        ##You may have to set this path for your setup on ROS2
+        
+        # "Leap ID" is copied from the Leap hand's code
+        # this is where we load our hand's URDF file to pybullet 
         self.LeapId = p.loadURDF(
             path_src,
             [0, 0, 0],
@@ -38,7 +45,7 @@ class PybulletIK(Node):
             useFixedBase = True
         )
  
-        #this is leap hand specific and may require us to change
+        #Left hand vs Right hand, which glove you are using 
         if self.is_left:
             #writing to /leaphand_node/cmd_allegro_left
             self.pub_hand = self.create_publisher(JointState, "/left_hand", 10)
@@ -54,6 +61,10 @@ class PybulletIK(Node):
         useRealTimeSimulation = 0
         p.setRealTimeSimulation(useRealTimeSimulation)
         self.create_target_vis()
+        
+    '''
+    We create 5 balls in the simulation to track the movement of the finger tips 
+    '''
             
     def create_target_vis(self):
         # Load balls
@@ -89,6 +100,11 @@ class PybulletIK(Node):
         _, current_orientation = p.getBasePositionAndOrientation(self.ballMbt[4])
         p.resetBasePositionAndOrientation(self.ballMbt[4], hand_pos[3], current_orientation)
 
+
+    '''
+    get_glove_data is a subsciber to the Pose Array topic from read_and_send_zmq.py
+    Reads the raw data and manipulates it to better map to the actual hand
+    '''
     def get_glove_data(self, pose):
         #gets the data converts it and then computes IK and visualizes
         poses = pose.poses
@@ -108,6 +124,10 @@ class PybulletIK(Node):
         self.compute_IK(hand_pos)
         self.update_target_vis(hand_pos)
         
+    '''
+    Computers the Inverse Kinematics 
+    '''
+        
     def compute_IK(self, hand_pos):
         p.stepSimulation()
 
@@ -116,6 +136,10 @@ class PybulletIK(Node):
         # Middle: 4, 5
         # Ring: 6, 7
         # Pinky: 8, 9   
+        
+        # assigning specific joint indexes to variable names
+        # middle_pos refers to the DIP
+        # fingername_pos refers to the tip 
 
         rightHandPinky_middle_pos = hand_pos[8]
         rightHandPinky_pos = hand_pos[9]
@@ -132,6 +156,8 @@ class PybulletIK(Node):
         rightHandThumb_middle_pos = hand_pos[0]
         rightHandThumb_pos = hand_pos[1]
         
+        # the x,y,z of each of the end effectors 
+        
         leapEndEffectorPos = [
             rightHandThumb_middle_pos,
             rightHandThumb_pos,
@@ -144,6 +170,9 @@ class PybulletIK(Node):
             rightHandPinky_middle_pos,
             rightHandPinky_pos
         ]
+        
+        # here you are calculating each of the joint angles through inverse kinematics 
+        # which is held in a jointPoses Array
 
         jointPoses = p.calculateInverseKinematics2(
             self.LeapId,
@@ -161,7 +190,7 @@ class PybulletIK(Node):
 
         combined_jointPoses = list(combined_jointPoses)
 
-        # update the hand joints
+        # update the hand joints in the pybullet simulation 
         for i in range(23):
             p.setJointMotorControl2(
                 bodyIndex=self.LeapId,
