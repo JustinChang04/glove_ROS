@@ -3,11 +3,9 @@ import pybullet as p
 import numpy as np
 import rclpy
 import os
-import serial
-import struct
-import time
 
 from rclpy.node import Node
+from std_msgs.msg import Float32MultiArray
 from sensor_msgs.msg import JointState
 from geometry_msgs.msg import PoseArray
 '''
@@ -45,7 +43,7 @@ class PybulletIK(Node):
             #reading from /glove/l_short
             self.sub_skeleton = self.create_subscription(PoseArray, "/glove/l_short", self.get_glove_data, 10)
         else:  
-            self.pub_hand = self.create_publisher(JointState, "/right_hand", 10)
+            self.pub_hand = self.create_publisher(Float32MultiArray, "/right_hand", 10)
             self.sub_skeleton = self.create_subscription(PoseArray, "/glove/r_short", self.get_glove_data, 10)
        ##################
 
@@ -57,8 +55,6 @@ class PybulletIK(Node):
             
     def create_target_vis(self):
         # Load balls
-        small_ball_radius = 0.01
-        small_ball_shape = p.createCollisionShape(p.GEOM_SPHERE, radius=small_ball_radius)
         ball_radius = 0.01
         ball_shape = p.createCollisionShape(p.GEOM_SPHERE, radius=ball_radius)
         baseMass = 0.001
@@ -96,7 +92,7 @@ class PybulletIK(Node):
         hand_pos = []  
         for i in range(0,10):
             # hand_pos.append([-poses[i].position.y, -poses[i].position.x, poses[i].position.z])
-            hand_pos.append([-poses[i].position.y, -poses[i].position.x, poses[i].position.z])
+            hand_pos.append([-poses[i].position.y * 1.2, -poses[i].position.x * 1.2, poses[i].position.z])
         hand_pos[1][2] = hand_pos[1][2] - 0.06  
         hand_pos[1][1] = hand_pos[1][1] + 0.01    
         hand_pos[9][2] = hand_pos[9][2] + 0.04
@@ -181,10 +177,15 @@ class PybulletIK(Node):
         # real_robot_hand_q[4:6] = real_robot_hand_q[4:6][::-1]
         # real_robot_hand_q[8:10] = real_robot_hand_q[8:10][::-1]
         
-        state = JointState()
-        state.position = [float(i) for i in real_robot_hand_q]
+        state = Float32MultiArray()
+        state.data = [float(i) for i in real_robot_hand_q]
         self.pub_hand.publish(state)
-        time.sleep(0.01)
+
+        # thread = threading.Thread(target=self.send_serial, args=(real_robot_hand_q,))
+        # thread.start()
+
+        # data = struct.pack("<B18f", 0xAB, *real_robot_hand_q)
+        # self.pub_hand.write(data)
 
 def main(args=None):
     rclpy.init(args=args)
