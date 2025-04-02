@@ -75,8 +75,13 @@ class GloveReader(Node):
             print("Glove serial number incorrect!")  
             print(data[0])      
 
+'''
+Based on how much data you want, given by the number of gloves you are currently using 
+this code is able to read the MANUS Glove's data and publish it to the ROS topics
+Which is what we are going to use later, "subscribing" to its data
+'''
 
-def main(args=None):
+def main(args=None): 
     rclpy.init(args=args)
     glove_reader = GloveReader()
     while rclpy.ok():
