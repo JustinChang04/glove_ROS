@@ -42,7 +42,8 @@ class PybulletIK(Node):
             p.getQuaternionFromEuler([0, 0, 0]),
             useFixedBase = True
         )
- 
+#50 #-35
+        p.resetDebugVisualizerCamera(cameraDistance=0.20, cameraYaw=75, cameraPitch=-25, cameraTargetPosition=[0, 0, 0.1])
         #Left hand vs Right hand, which glove you are using 
         if self.is_left:
             #writing to /leaphand_node/cmd_allegro_left
@@ -58,6 +59,7 @@ class PybulletIK(Node):
         # p.setGravity(0, 0, 0)
         useRealTimeSimulation = 0
         p.setRealTimeSimulation(useRealTimeSimulation)
+        
         self.create_target_vis()
         
     '''
@@ -112,6 +114,11 @@ class PybulletIK(Node):
         hand_pos[1][2] = hand_pos[1][2] - 0.06  
         hand_pos[1][1] = hand_pos[1][1] + 0.01    
         hand_pos[9][2] = hand_pos[9][2] + 0.04
+        hand_pos[3][1] -= 0.04
+        hand_pos[5][2] += 0.04
+        hand_pos[7][2] += 0.04
+        hand_pos[7][1] -= 0.01
+        hand_pos[9][1] += 0.01
         # hand_pos[7][0] = hand_pos[7][0] + 0.02
         #hand_pos[2][1] = hand_pos[2][1] + 0.002
         # hand_pos[4][1] = hand_pos[4][1] + 0.002
@@ -126,7 +133,7 @@ class PybulletIK(Node):
         
     def compute_IK(self, hand_pos):
         p.stepSimulation()
-
+      
         # Thumb: 0, 1
         # Index: 2, 3
         # Middle: 4, 5
