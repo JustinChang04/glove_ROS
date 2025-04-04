@@ -1,5 +1,7 @@
 # Instructions
 
+Requires installation of [ROS 2 Humble](https://docs.ros.org/en/humble/index.html).
+
 Before any actions, run
 ```bash
 source /opt/ros/humble/setup.bash
