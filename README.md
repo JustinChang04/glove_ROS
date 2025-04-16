@@ -1,24 +1,28 @@
 # Setup
-Requires a machine that can run [Ubuntu Linux 22.04](https://docs.ros.org/en/humble/Installation/Alternatives/Ubuntu-Development-Setup.html) and the installation of [ROS 2 Humble](https://docs.ros.org/en/humble/index.html).
+- Requires a machine that can run [Ubuntu Linux 22.04](https://docs.ros.org/en/humble/Installation/Alternatives/Ubuntu-Development-Setup.html) and the installation of [ROS 2 Humble](https://docs.ros.org/en/humble/index.html).
 
-Run the [MANUS SDK](https://github.com/Soltanilara/Krysalis_Hand/tree/6109bbc9e07616c5b7049191f57431e49df69b65/SDKClient_Linux) in the background first. 
+### MANUS SDK
+- Download the required packages to run the "Core Integrated" MANUS SDK C++ in Linux by following [MANUS Instructions](https://docs.manus-meta.com/2.4.0/Plugins/SDK/Linux/)
 
-Clone the Repository, this is your ROS2 Workspace 
+- After downloading, run the [MANUS SDK](https://github.com/Soltanilara/Krysalis_Hand/tree/6109bbc9e07616c5b7049191f57431e49df69b65/SDKClient_Linux). 
+
+### ROS2 Workspace
+1. Clone the Repository, this is your ROS2 Workspace 
 ```bash
 git clone https://github.com/JustinChang04/glove_ROS.git
 ```
 
-Change the left and right glove serial number to match your own MANUS Glove
+2. Change the left and right glove serial number to match your own MANUS Glove
 ```bash
 cd src/glove/glove/read_and_send_zmq.py
 ```
 
-Upload your URDF File and its STL files in the robot_hand file
+3. Upload your URDF File and its STL files in the robot_hand file
 ```bash
 cd src/telekinesis/robot_hand
 ```
 
-Install the necessary libraries 
+4. Install the necessary libraries 
 ```bash
 pip install pybullet
 pip install rclpy
