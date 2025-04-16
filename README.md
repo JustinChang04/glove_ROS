@@ -1,5 +1,5 @@
 # Setup
-- Requires a machine that can run [Ubuntu Linux 22.04](https://docs.ros.org/en/humble/Installation/Alternatives/Ubuntu-Development-Setup.html) and the installation of [ROS 2 Humble](https://docs.ros.org/en/humble/index.html).
+Requires a machine that can run [Ubuntu Linux 22.04](https://docs.ros.org/en/humble/Installation/Alternatives/Ubuntu-Development-Setup.html) and the installation of [ROS 2 Humble](https://docs.ros.org/en/humble/index.html).
 
 ### MANUS SDK
 - Download the required packages to run the "Core Integrated" MANUS SDK C++ in Linux by following [MANUS Instructions](https://docs.manus-meta.com/2.4.0/Plugins/SDK/Linux/)
