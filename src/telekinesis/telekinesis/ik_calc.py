@@ -15,6 +15,44 @@ Note how the fingertip positions are matching, but the joint angles between the 
 
 Inspired by Dexcap https://dex-cap.github.io/ by Wang et. al. and Robotic Telekinesis by Shaw et. al.
 '''
+
+CMC_THUMB = 1.0 / 1.8545
+MCP_THUMB = 1.0 / 0.9203
+IP_THUMB = 1.0 / 0.7858
+
+MCP_INDEX = 1.0 / 1.8002
+PIP_INDEX = 1.0 / 1.3104
+DIP_INDEX = 1.0 / 1.1885
+
+MCP_MIDDLE = 1.0 / 1.7791
+PIP_MIDDLE = 1.0 / 1.2823
+DIP_MIDDLE = 1.0 / 1.275
+
+MCP_RING = 1.0 / 1.7553
+PIP_RING = 1.0 / 1.273
+DIP_RING = 1.0 / 1.2842
+
+MCP_PINKY = 1.0 / 1.7269
+PIP_PINKY = 1.0 / 1.2573
+DIP_PINKY = 1.0 / 1.2577
+
+CMC_INDEX_RING = 1.0 / (0.4666 * 3.0)
+CMC_PINKY = 1.0 / (0.6872 * 3.0)
+
+normalizationArr = np.array([CMC_THUMB, MCP_THUMB, IP_THUMB,\
+                            CMC_INDEX_RING, MCP_INDEX, PIP_INDEX, DIP_INDEX,\
+                            MCP_MIDDLE, PIP_MIDDLE, DIP_MIDDLE,\
+                            CMC_INDEX_RING, MCP_RING, PIP_RING, DIP_RING,\
+                            CMC_PINKY, MCP_PINKY, PIP_PINKY, DIP_PINKY]).astype(np.float32)
+
+def normalize(val: np.float32):
+    if val < 0.0:
+        return 0.0
+    elif val > 1.0:
+        return 1.0
+    else:
+        return val
+
 class PybulletIK(Node):
     def __init__(self):
         super().__init__('pyb_ik')  
@@ -207,14 +245,16 @@ class PybulletIK(Node):
             )
 
         # map results to real robot
-        real_robot_hand_q = np.array(jointPoses).astype(np.float32)
+        jointPoses = np.array(jointPoses).astype(np.float32)
+        jointPoses = np.array([jointPoses[i] * normalizationArr[i] for i in range(len(jointPoses))])
+        jointPoses = np.array([normalize[i] for i in jointPoses])
 
         # real_robot_hand_q[0:2] = real_robot_hand_q[0:2][::-1]
         # real_robot_hand_q[4:6] = real_robot_hand_q[4:6][::-1]
         # real_robot_hand_q[8:10] = real_robot_hand_q[8:10][::-1]
         
         state = Float32MultiArray()
-        state.data = [float(i) for i in real_robot_hand_q]
+        state.data = [float(i) for i in jointPoses]
         self.pub_hand.publish(state)
 
         # thread = threading.Thread(target=self.send_serial, args=(real_robot_hand_q,))
