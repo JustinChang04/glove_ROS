@@ -27,6 +27,13 @@ cd src/telekinesis/robot_hand
 pip install pybullet
 pip install rclpy
 ```
+<div status = center>
+    <img src = "image/pybullet_figure.png"/>
+</div> 
+
+# Documentation
+There are certain sections of the code you need to look out for when it comes to 
+
 
 # Instructions
 
