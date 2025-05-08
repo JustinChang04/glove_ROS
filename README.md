@@ -17,12 +17,8 @@ git clone https://github.com/JustinChang04/glove_ROS.git
 cd src/glove/glove/read_and_send_zmq.py
 ```
 
-3. Upload your URDF File and its STL files in the robot_hand file
-```bash
-cd src/telekinesis/robot_hand
-```
 
-4. Install the necessary libraries 
+3. Install the necessary libraries 
 ```bash
 pip install pybullet
 pip install rclpy
@@ -32,8 +28,34 @@ pip install rclpy
 </div>
 
 # Documentation
-There are certain sections of the code you need to look out for when it comes to 
+If you want to modify the teleop code for your own robot hand here are the steps to do so: 
 
+1. Upload your URDF File and its STL files in the robot_hand file
+```bash
+cd src/telekinesis/robot_hand
+```
+
+2. In ik_calc.py you need to modify the end-effector list to match your own URDF. You can find this by adding the below code to the function
+num_joints = p.getNumJoints(robot_id)
+```bash
+for i in range(num_joints):
+    info = p.getJointInfo(robot_id, i)
+    joint_index = info[0]
+    joint_name = info[1].decode('utf-8')
+    link_name = info[12].decode('utf-8') 
+    print(f"Joint Index: {joint_index}, Joint Name: {joint_name}, Link Name: {link_name}")
+```
+This is what allows the pybullet IK_calc function to work correctly. The end-effectors should be fingertip and node before fingertip (most likely your variation of DIP)
+
+
+3. In the get_glove_data modify the positions similarly to how we do it to best match your robot hand and output the most accurate angel calculations 
+
+<div style="text-align: center;">
+    <img src="image/get_glove_data.png" width="350"/>
+</div>
+
+
+With these modifications you should be able to run this code with your specific robot hand
 
 # Instructions
 
