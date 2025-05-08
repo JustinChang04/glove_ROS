@@ -50,11 +50,6 @@ This is what allows the pybullet IK_calc function to work correctly. The end-eff
 
 3. In the get_glove_data modify the positions similarly to how we do it to best match your robot hand and output the most accurate angel calculations 
 
-<div style="text-align: center;">
-    <img src="image/get_glove_data.png" width="350"/>
-</div>
-
-
 With these modifications you should be able to run this code with your specific robot hand
 
 # Instructions
