@@ -1,0 +1,1414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Assem_Krysalis_2.0_w_tip">
+  <link
+    name="Palm">
+    <inertial>
+      <origin
+        xyz="-0.00336112751246301 -0.00126204820328389 0.0509765107252153"
+        rpy="0 0 0" />
+      <mass
+        value="0.0960418153856286" />
+      <inertia
+        ixx="0.000187370317748953"
+        ixy="2.19686404004751E-06"
+        ixz="-2.35603846987126E-06"
+        iyy="0.000131772316955808"
+        iyz="-4.63319480413356E-06"
+        izz="9.10279761405657E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="Palm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="Palm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="I_B_MCP">
+    <inertial>
+      <origin
+        xyz="-0.000141739276416801 0.00741428154939992 0.00589412752443945"
+        rpy="0 0 0" />
+      <mass
+        value="0.00533430916082235" />
+      <inertia
+        ixx="1.03059747583205E-06"
+        ixy="2.85478307872704E-09"
+        ixz="5.92064186876549E-09"
+        iyy="6.30910248340744E-07"
+        iyz="-3.2674677254038E-07"
+        izz="8.35250594472787E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="I_B_MCP.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="I_B_MCP.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Index_Below_MCP"
+    type="revolute">
+    <origin
+      xyz="0.00025993687392397 0.0315000000002555 0.107449685587281"
+      rpy="1.56837718182086 0 -1.5707963267949" />
+    <parent
+      link="Palm" />
+    <child
+      link="I_B_MCP" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0.4666"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="I_MCP">
+    <inertial>
+      <origin
+        xyz="-1.74796722927639E-05 0.0124250711743696 0.0058426315749894"
+        rpy="0 0 0" />
+      <mass
+        value="0.00275593818403219" />
+      <inertia
+        ixx="3.71397884574259E-07"
+        ixy="-4.41791263152425E-11"
+        ixz="5.12460431930859E-11"
+        iyy="2.5262105471543E-07"
+        iyz="4.7152155929534E-08"
+        izz="3.66972870611928E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="I_MCP.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="I_MCP.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Index_MCP"
+    type="revolute">
+    <origin
+      xyz="0 0.028 0.0105"
+      rpy="3.13917350861575 0 3.14159265358979" />
+    <parent
+      link="I_B_MCP" />
+    <child
+      link="I_MCP" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1.8002"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="I_PIP">
+    <inertial>
+      <origin
+        xyz="-1.88820664745251E-05 0.0102468368049186 0.00623026074572508"
+        rpy="0 0 0" />
+      <mass
+        value="0.00240650569109441" />
+      <inertia
+        ixx="2.39241320598999E-07"
+        ixy="-3.26825532576825E-11"
+        ixz="3.59120505827685E-11"
+        iyy="2.04216942737744E-07"
+        iyz="3.40554202933924E-09"
+        izz="2.34949436654266E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="I_PIP.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="I_PIP.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Index_PIP"
+    type="revolute">
+    <origin
+      xyz="0 0.0349845407392164 4.41133227821432E-05"
+      rpy="0 0 0" />
+    <parent
+      link="I_MCP" />
+    <child
+      link="I_PIP" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1.3104"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="I_DIP">
+    <inertial>
+      <origin
+        xyz="-1.79519038989301E-05 0.0186543055776024 0.00887453826186116"
+        rpy="0 0 0" />
+      <mass
+        value="0.0040106245650035" />
+      <inertia
+        ixx="5.37384141517475E-07"
+        ixy="-2.5593882302487E-10"
+        ixz="-2.95170591763761E-11"
+        iyy="2.03576091579686E-07"
+        iyz="-6.20177032383164E-08"
+        izz="5.63159387546303E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="I_DIP.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="I_DIP.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Index_DIP"
+    type="revolute">
+    <origin
+      xyz="0 0.028 0"
+      rpy="0 0 0" />
+    <parent
+      link="I_PIP" />
+    <child
+      link="I_DIP" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1.1885"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="I_DIP_TIP">
+    <inertial>
+      <origin
+        xyz="-1.79519039943954E-05 -0.0208456944224019 -0.00112546173812142"
+        rpy="0 0 0" />
+      <mass
+        value="0.0040106245650035" />
+      <inertia
+        ixx="5.37384141517475E-07"
+        ixy="-2.55938823025823E-10"
+        ixz="-2.95170591766637E-11"
+        iyy="2.03576091579686E-07"
+        iyz="-6.20177032383164E-08"
+        izz="5.63159387546304E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="I_DIP_TIP.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="I_DIP_TIP.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Index_DIP_Tip"
+    type="fixed">
+    <origin
+      xyz="0 0.0395000000000044 0.00999999999998258"
+      rpy="0 0 0" />
+    <parent
+      link="I_DIP" />
+    <child
+      link="I_DIP_TIP" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="M_MCP">
+    <inertial>
+      <origin
+        xyz="0.0101136051282379 0.0123174698855538 0.00573716118976326"
+        rpy="0 0 0" />
+      <mass
+        value="0.00272570697607332" />
+      <inertia
+        ixx="3.60740402441102E-07"
+        ixy="-4.98136478328139E-11"
+        ixz="5.84220336308727E-11"
+        iyy="2.49082055341979E-07"
+        iyz="4.63136314080859E-08"
+        izz="3.60045799738862E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="M_MCP.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="M_MCP.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Middle_MCP"
+    type="revolute">
+    <origin
+      xyz="-0.0101475464129992 0.000368685088019156 0.144474971114474"
+      rpy="1.5707963267949 0 1.5707963267949" />
+    <parent
+      link="Palm" />
+    <child
+      link="M_MCP" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1.7791"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="M_PIP">
+    <inertial>
+      <origin
+        xyz="0.0101119852813636 0.0102522061972216 0.00631470261668012"
+        rpy="0 0 0" />
+      <mass
+        value="0.00237659123877085" />
+      <inertia
+        ixx="2.36205814604039E-07"
+        ixy="1.6889222834855E-12"
+        ixz="3.63343287776363E-11"
+        iyy="2.02624850513524E-07"
+        iyz="3.73991772652453E-09"
+        izz="2.28945177390661E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="M_PIP.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="M_PIP.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Middle_PIP"
+    type="revolute">
+    <origin
+      xyz="0 0.0349845407392165 4.41133227668707E-05"
+      rpy="0 0 0" />
+    <parent
+      link="M_MCP" />
+    <child
+      link="M_PIP" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1.2823"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="M_DIP">
+    <inertial>
+      <origin
+        xyz="0.00959086212499157 0.0186497252381327 0.00882563884040408"
+        rpy="0 0 0" />
+      <mass
+        value="0.00393985956650398" />
+      <inertia
+        ixx="5.33501630331674E-07"
+        ixy="-2.54150672976246E-10"
+        ixz="-2.3919279800416E-11"
+        iyy="2.02161704753379E-07"
+        iyz="-6.16509018038548E-08"
+        izz="5.59716183770947E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="M_DIP.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="M_DIP.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Middle_DIP"
+    type="revolute">
+    <origin
+      xyz="0.000522164976683021 0.0279999999999987 0"
+      rpy="0 0 0" />
+    <parent
+      link="M_PIP" />
+    <child
+      link="M_DIP" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1.275"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="M_DIP_TIP">
+    <inertial>
+      <origin
+        xyz="-1.82878108103066E-05 -0.0208502747618488 -0.00117436115957867"
+        rpy="0 0 0" />
+      <mass
+        value="0.00393985956650398" />
+      <inertia
+        ixx="5.33501630331674E-07"
+        ixy="-2.54150672977199E-10"
+        ixz="-2.39192798007306E-11"
+        iyy="2.02161704753379E-07"
+        iyz="-6.16509018038548E-08"
+        izz="5.59716183770948E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="M_DIP_TIP.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="M_DIP_TIP.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Middle_DIP_Tip"
+    type="fixed">
+    <origin
+      xyz="0.00960914993580181 0.0394999999999815 0.00999999999998275"
+      rpy="0 0 0" />
+    <parent
+      link="M_DIP" />
+    <child
+      link="M_DIP_TIP" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="R_B_MCP">
+    <inertial>
+      <origin
+        xyz="0.000141399891635859 0.00748571395865061 -0.00591445154809213"
+        rpy="0 0 0" />
+      <mass
+        value="0.00533806252303627" />
+      <inertia
+        ixx="1.03534832027811E-06"
+        ixy="-2.71242051159311E-09"
+        ixz="5.52800131027795E-09"
+        iyy="6.29683236221667E-07"
+        iyz="3.28505951926138E-07"
+        izz="8.39889440135407E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="R_B_MCP.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="R_B_MCP.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Ring_Below_MCP"
+    type="revolute">
+    <origin
+      xyz="0.000259936873923963 -0.0104999999997445 0.107449685587381"
+      rpy="1.57321547176894 0 1.5707963267949" />
+    <parent
+      link="Palm" />
+    <child
+      link="R_B_MCP" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0.4666"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="R_MCP">
+    <inertial>
+      <origin
+        xyz="-0.000268189988785862 0.0123593741415649 0.00587054662659439"
+        rpy="0 0 0" />
+      <mass
+        value="0.00276772093942444" />
+      <inertia
+        ixx="3.62933389029121E-07"
+        ixy="-2.60081421661576E-11"
+        ixz="4.37192595370438E-11"
+        iyy="2.51940280505408E-07"
+        iyz="4.48501394200219E-08"
+        izz="3.63178789330109E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="R_MCP.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="R_MCP.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Ring_MCP"
+    type="revolute">
+    <origin
+      xyz="0 0.028 -0.0105"
+      rpy="-0.00241914497404017 0 0" />
+    <parent
+      link="R_B_MCP" />
+    <child
+      link="R_MCP" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1.7553"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="R_PIP">
+    <inertial>
+      <origin
+        xyz="-0.000268007410874819 0.0102930001890824 0.00630516901708345"
+        rpy="0 0 0" />
+      <mass
+        value="0.00238433770831263" />
+      <inertia
+        ixx="2.36357869094945E-07"
+        ixy="-6.47172918518483E-12"
+        ixz="1.50256635034219E-11"
+        iyy="2.03192763289084E-07"
+        iyz="3.38551430509482E-09"
+        izz="2.30525580423152E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="R_PIP.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="R_PIP.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Ring_PIP"
+    type="revolute">
+    <origin
+      xyz="0 0.0349845407392164 4.41133227821432E-05"
+      rpy="0 0 0" />
+    <parent
+      link="R_MCP" />
+    <child
+      link="R_PIP" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1.273"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="R_DIP">
+    <inertial>
+      <origin
+        xyz="-0.000268307158374044 0.0186629580233482 0.00880902140623846"
+        rpy="0 0 0" />
+      <mass
+        value="0.00392874630789001" />
+      <inertia
+        ixx="5.33045817789401E-07"
+        ixy="-2.55703251055339E-10"
+        ixz="-2.41570158083854E-11"
+        iyy="2.01759000252673E-07"
+        iyz="-6.18615098701647E-08"
+        izz="5.59544862841668E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="R_DIP.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="R_DIP.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Ring_DIP"
+    type="revolute">
+    <origin
+      xyz="0 0.028 0"
+      rpy="0 0 0" />
+    <parent
+      link="R_PIP" />
+    <child
+      link="R_DIP" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1.2842"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="R_DIP_TIP">
+    <inertial>
+      <origin
+        xyz="-1.83071584694584E-05 -0.0208370419766526 -0.00119097859376072"
+        rpy="0 0 0" />
+      <mass
+        value="0.00392874630789" />
+      <inertia
+        ixx="5.33045817789401E-07"
+        ixy="-2.55703251056264E-10"
+        ixz="-2.41570158086907E-11"
+        iyy="2.01759000252673E-07"
+        iyz="-6.18615098701647E-08"
+        izz="5.59544862841668E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="R_DIP_TIP.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="R_DIP_TIP.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RIng_DIP_Tip"
+    type="fixed">
+    <origin
+      xyz="-0.000249999999904653 0.0395000000000008 0.00999999999999918"
+      rpy="0 0 0" />
+    <parent
+      link="R_DIP" />
+    <child
+      link="R_DIP_TIP" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="P_B_MCP">
+    <inertial>
+      <origin
+        xyz="-0.000168227261900064 0.0080558990165034 -0.00620012484236257"
+        rpy="0 0 0" />
+      <mass
+        value="0.00512816464204547" />
+      <inertia
+        ixx="9.99698561554399E-07"
+        ixy="-2.1827826173263E-08"
+        ixz="1.5608574490924E-08"
+        iyy="6.10313700194574E-07"
+        iyz="3.14479374134626E-07"
+        izz="7.98354674262924E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="P_B_MCP.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="P_B_MCP.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Pinky_Below_MCP"
+    type="revolute">
+    <origin
+      xyz="0.000259936873923986 -0.0314999999997445 0.107449685587431"
+      rpy="1.57321547176894 0 1.5707963267949" />
+    <parent
+      link="Palm" />
+    <child
+      link="P_B_MCP" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0.6872"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="P_MCP">
+    <inertial>
+      <origin
+        xyz="-0.000267550632622952 0.0123862744175179 0.00586908545685018"
+        rpy="0 0 0" />
+      <mass
+        value="0.00275274176491444" />
+      <inertia
+        ixx="3.66134275300629E-07"
+        ixy="-5.23883811398767E-11"
+        ixz="5.22211426088232E-11"
+        iyy="2.51982316985481E-07"
+        iyz="4.56227898750705E-08"
+        izz="3.63835309760419E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="P_MCP.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="P_MCP.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Pinky_MCP"
+    type="revolute">
+    <origin
+      xyz="0 0.0279999999999999 -0.0105"
+      rpy="-0.00241914497404039 0 0" />
+    <parent
+      link="P_B_MCP" />
+    <child
+      link="P_MCP" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1.7269"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="P_PIP">
+    <inertial>
+      <origin
+        xyz="-0.000267209977131151 0.0103223731897579 0.00635357535735843"
+        rpy="0 0 0" />
+      <mass
+        value="0.00237895158522026" />
+      <inertia
+        ixx="2.36330412400924E-07"
+        ixy="1.93846338633235E-11"
+        ixz="6.55050514770154E-11"
+        iyy="2.0312827437442E-07"
+        iyz="3.65665989773007E-09"
+        izz="2.30950813603375E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="P_PIP.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="P_PIP.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Pinky_PIP"
+    type="revolute">
+    <origin
+      xyz="0 0.0349845407392164 4.4113322782138E-05"
+      rpy="0 0 0" />
+    <parent
+      link="P_MCP" />
+    <child
+      link="P_PIP" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1.2573"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="P_DIP">
+    <inertial>
+      <origin
+        xyz="-0.000273126237319468 0.0152163343976934 0.00857258000184557"
+        rpy="0 0 0" />
+      <mass
+        value="0.00310861642518284" />
+      <inertia
+        ixx="3.02201531520069E-07"
+        ixy="-7.85838748466127E-12"
+        ixz="-7.08860806047092E-12"
+        iyy="1.5637778832014E-07"
+        iyz="-4.50241053706585E-08"
+        izz="3.2115593985531E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="P_DIP.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="P_DIP.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Pinky_DIP"
+    type="revolute">
+    <origin
+      xyz="0 0.028 0"
+      rpy="0 0 0" />
+    <parent
+      link="P_PIP" />
+    <child
+      link="P_DIP" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1.2577"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="P_DIP_TIP">
+    <inertial>
+      <origin
+        xyz="-2.31262373931312E-05 -0.0152836656023072 -0.00142741999815443"
+        rpy="0 0 0" />
+      <mass
+        value="0.00310861642518284" />
+      <inertia
+        ixx="3.02201531520069E-07"
+        ixy="-7.85838748500904E-12"
+        ixz="-7.08860806069732E-12"
+        iyy="1.5637778832014E-07"
+        iyz="-4.50241053706585E-08"
+        izz="3.2115593985531E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="P_DIP_TIP.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="P_DIP_TIP.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Pinky_DIP_Tip"
+    type="fixed">
+    <origin
+      xyz="-0.000249999999926379 0.0305000000000006 0.01"
+      rpy="0 0 0" />
+    <parent
+      link="P_DIP" />
+    <child
+      link="P_DIP_TIP" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="TH_P_S">
+    <inertial>
+      <origin
+        xyz="0.000406645793325129 -0.0013353282589149 0.000120665994461477"
+        rpy="0 0 0" />
+      <mass
+        value="0.0104013413330721" />
+      <inertia
+        ixx="3.27135341496589E-06"
+        ixy="-9.7838050610371E-08"
+        ixz="-7.00108306196223E-10"
+        iyy="5.42061188234071E-07"
+        iyz="2.53068076236895E-08"
+        izz="3.50375398433683E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="TH_P_S.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="TH_P_S.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Thumb_Pro_Supination"
+    type="revolute">
+    <origin
+      xyz="8.9629E-05 0 0.03705"
+      rpy="0 0 0" />
+    <parent
+      link="Palm" />
+    <child
+      link="TH_P_S" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.6363"
+      upper="0.6363"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="TH_CMC">
+    <inertial>
+      <origin
+        xyz="0.00168374948696134 9.82022795267476E-05 0.0218902392078611"
+        rpy="0 0 0" />
+      <mass
+        value="0.00563563380951344" />
+      <inertia
+        ixx="1.26829161985642E-06"
+        ixy="1.05367025662751E-08"
+        ixz="-1.62375352321563E-07"
+        iyy="1.22011212814819E-06"
+        iyz="-2.03542346484152E-08"
+        izz="5.81959411025911E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="TH_CMC.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="TH_CMC.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Thumb_CMC"
+    type="revolute">
+    <origin
+      xyz="0.01156 0.0241200000000881 0"
+      rpy="1.57079632679832 0.872664625998062 2.75400953331244" />
+    <parent
+      link="TH_P_S" />
+    <child
+      link="TH_CMC" />
+    <axis
+      xyz="0.766044443119555 -0.642787609685852 0" />
+    <limit
+      lower="0"
+      upper="1.8545"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="TH_MCP">
+    <inertial>
+      <origin
+        xyz="-0.00410352367289986 -0.0188546486667915 -0.000135076167159031"
+        rpy="0 0 0" />
+      <mass
+        value="0.00332373832678888" />
+      <inertia
+        ixx="5.47690075858449E-07"
+        ixy="-3.06615095708694E-08"
+        ixz="1.57099440931214E-10"
+        iyy="3.25193587111842E-07"
+        iyz="4.33023614106889E-11"
+        izz="5.34108487293818E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="TH_MCP.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="TH_MCP.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Thumb_MCP"
+    type="revolute">
+    <origin
+      xyz="0.0106391616042572 0 0.0519999941010944"
+      rpy="-1.5707963267949 -0.240680903850018 0" />
+    <parent
+      link="TH_CMC" />
+    <child
+      link="TH_MCP" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.35269"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="TH_IP">
+    <inertial>
+      <origin
+        xyz="-0.00960947728686828 -0.000136820976697368 0.0166952338806427"
+        rpy="0 0 0" />
+      <mass
+        value="0.00421936393838756" />
+      <inertia
+        ixx="5.73437580240794E-07"
+        ixy="-2.4223152338547E-10"
+        ixz="1.09057647451357E-07"
+        iyy="5.79569687911807E-07"
+        iyz="1.39217579895531E-10"
+        izz="3.12842615310851E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="TH_IP.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="TH_IP.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Thumb_IP"
+    type="revolute">
+    <origin
+      xyz="0 -0.04 0"
+      rpy="1.5707963267949 0 -0.0694641042293601" />
+    <parent
+      link="TH_MCP" />
+    <child
+      link="TH_IP" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.56343"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="TH_IP_TIP">
+    <inertial>
+      <origin
+        xyz="0.00733993696143277 6.49313873241422E-06 -0.0155735597189967"
+        rpy="0 0 0" />
+      <mass
+        value="0.00421936393838756" />
+      <inertia
+        ixx="5.73437580240794E-07"
+        ixy="-2.42231523385312E-10"
+        ixz="1.09057647451358E-07"
+        iyy="5.79569687911808E-07"
+        iyz="1.39217579895321E-10"
+        izz="3.12842615310851E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="TH_IP_TIP.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="TH_IP_TIP.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Thumb_IP_Tip"
+    type="fixed">
+    <origin
+      xyz="-0.0169494142483011 -0.000143314115429772 0.0322687935996393"
+      rpy="0 0 0" />
+    <parent
+      link="TH_IP" />
+    <child
+      link="TH_IP_TIP" />
+    <axis
+      xyz="0.513910672412694 0.289527962684288 0.807508129744969" />
+  </joint>
+</robot>

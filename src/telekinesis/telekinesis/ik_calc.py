@@ -70,7 +70,8 @@ class PybulletIK(Node):
         '''
         self.leapEndEffectorIndex = [2, 3, 7, 8, 11, 12, 16, 17, 21, 22]
         
-        path_src = os.path.join(os.path.expanduser("~"), "glove_ROS/src/telekinesis/robot_hand/hand.urdf")
+       # path_src = os.path.join(os.path.expanduser("~"), "glove_ROS/src/telekinesis/robot_hand/hand.urdf")
+        path_src = os.path.join(os.path.expanduser("~"), "glove_ROS/src/telekinesis/updated_urdf/Assem_Krysalis_2.0_w_tip.urdf")
         
         # "Leap ID" is copied from the Leap hand's code
         # this is where we load our hand's URDF file to pybullet 
